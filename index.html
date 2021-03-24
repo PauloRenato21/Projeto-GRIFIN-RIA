@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="bootstrap-4.5.3-dist/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="Css/StyleIndex.css"/>
+        <link rel="shortcut icon" href="Imagens/Top_Bolos.png" type="image/png"/>
+        <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap" rel="stylesheet"/>
+
+        <title>Top Bolos | Home</title>
+    </head>
+    <body>
+
+        <br/>
+        
+        <!--Logo-->
+        <header>
+            <div class="logo">
+                <a href="index.html"><img id="logo" src="Imagens/Top_Bolos.png" alt="Top Bolos" title="Top Bolos"/></a>
+                <img class="cesta" src="Imagens/cesto-de-compras.png" onmousemove="this.src='Imagens/cesto_icon.png'" onmouseout="this.src='Imagens/cesto-de-compras.png'" alt="Top Bolos Cesta" title="Comprar"/>
+            </div>
+        </header>
+
+        <br/>
+
+        <!--Menu-->
+        <nav>
+            <table>
+                <tr>
+                    <td>
+                        <a href="index.html">Home</a>
+                    </td>
+                    <td>
+                        <a href="#bolos">Bolos</a>
+                    </td>
+                    <td>
+                        <a href="#tortas">Tortas</a>
+                    </td>
+                    <td>
+                        <a href="#doces">Doces</a>
+                    </td>
+                </tr>
+            </table>
+        </nav>
+
+        <br/>
+        <br/>
+
+        <!--Carrosel no Boodstrap-->
+        <nav>
+            <div class="carousel slide" id="carrosel" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h2>Bolo Oreo</h2>
+                        <img src="Imagens/Carrosel/bolo-oreo.png" alt="Top Bolos" title="Bolo Oreo Top Bolos" data-toggle="modal" data-target="#primeiroModal"/>
+
+                        <!-- Primeiro Modal Carrosel-->
+                        <div class="modal fade" id="primeiroModal" role="dialog">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h3>Bolo Oreo</h3>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img src="Imagens/Carrosel/bolo-oreo.png" alt="Top Bolos" title="Bolo Oreo Top Bolos"/>
+                                        <button>R$: 20,00</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>    
+                    <div class="carousel-item">
+                        <h2>Cupcake Tart queques</h2>
+                        <img src="Imagens/Carrosel/cupcake.png" alt="Top Bolos" title="Cupcake Top Bolos" data-toggle="modal" data-target="#segundoModal"/>
+
+                        <!-- Segundo Modal Carrosel-->
+                        <div class="modal fade" id="segundoModal" role="dialog">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h3>Cupcake Tart queques</h3>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img src="Imagens/Carrosel/cupcake.png" alt="Top Bolos" title="Cupcake Top Bolos"/>
+                                        <button>R$: 20,00</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+        
+                    <div class="carousel-item">
+                        <h2>Torta Floresta Negra</h2>
+                        <img src="Imagens/Carrosel/torta.png" alt="Top Bolos" title="Torta Top Bolos" data-toggle="modal" data-target="#terceiroModal"/>
+
+                        <!-- Terceiro Modal Carrosel-->
+                        <div class="modal fade" id="terceiroModal" role="dialog">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h3>Torta Floresta Negra</h3>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img src="Imagens/Carrosel/torta.png" alt="Top Bolos" title="Torta Floresta Negra"/>
+                                        <button>R$: 20,00</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+        
+                    <div class="carousel-item">
+                        <h2>Trufas Gourmet</h2>
+                        <img src="Imagens/Carrosel/trufas.png" alt="Top Bolos" title="Trufa Top Bolos" data-toggle="modal" data-target="#quartoModal"/>
+
+                        <!-- Quarto Modal Carrosel-->
+                        <div class="modal fade" id="quartoModal" role="dialog">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h3>Trufas Gourmet</h3>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <img src="Imagens/Carrosel/trufas.png" alt="Top Bolos" title="Trufas Gourmet"/>
+                                        <button>R$: 20,00</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <a href="#carrosel" class="carousel-control-prev" data-slide="prev">
+                        <img src="Imagens/Carrosel/seta_esquerda.png" alt="Seta para esquerda" title="Voltar"/>
+                    </a>
+        
+                    <a href="#carrosel" class="carousel-control-next" data-slide="next">
+                        <img src="Imagens/Carrosel/seta_direita.png" alt="Seta para direita" title="Avançar"/>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <br/>
+
+        <!--Menu Lateral-->
+        <aside id="menuLateral">
+            <br/>
+            <br/>
+            <p><strong>Contatos</strong></p>
+            <br/>
+            <br/>
+            <a href="https://web.whatsapp.com/" target="_blank"><img src="Imagens/Menu_Lateral/whatsapp.png" alt="Icone Whatsapp" title="Whatsapp"/></a>
+            <br/>
+            <br/>
+            <a href="https://www.facebook.com/" target="_blank"><img src="Imagens/Menu_Lateral/facebook.png" alt="Icone Facebook" title="Facebook"/></a>
+            <br/>
+            <br/>
+            <a href="https://twitter.com/" target="_blank"><img src="Imagens/Menu_Lateral/twitter.png" alt="Icone Twitter" title="Twitter"/></a>
+            <br/>
+            <br/>
+            <br/>
+            <p><strong>(11) 4002-8922</strong></p>
+        </aside>
+
+        <br/>
+        <br/>
+
+        <!--Promoções Bolos-->
+        <section id="bolos">
+            
+            <h3>Promoções Bolos </h3>
+            <br/>
+
+            <div class="quadro1">
+                <img src="Imagens/Promocoes_Bolos/Bolo-Cobertuta.png" alt="Bolos Top Bolos" title="Bolo Cobertura Morango"/>
+                
+                <div class="nome">
+                    <p>Bolo com Morango</p>
+                </div>
+                <button>R$: 20,00</button>
+            </div>
+
+            <div class="quadro2">
+                <img src="Imagens/Promocoes_Bolos/Bolo-Surpresa.png" alt="Bolos Top Bolos" title="Bolo Surpresa"/>
+
+                <div class="nome">
+                    <p>Bolo Surpresa Kit Kat</p>
+                </div>
+                <button>R$: 20,00</button>
+            </div>
+
+            <div class="quadro3">
+                <img src="Imagens/Promocoes_Bolos/Bolo-Aniver.png" alt="Bolos Top Bolos" title="Bolo Aniversário"/>
+
+                <div class="nome">
+                    <p>Bolo de Aniversário</p>
+                </div>
+                <button>R$: 20,00</button>
+            </div>
+
+            <div class="quadro4">
+                <img src="Imagens/Promocoes_Bolos/Bolo-KitKat.png" alt="Bolos Top Bolos" title="Bolo Kit Kat Brigadeiro"/>
+
+                <div class="nome">
+                    <p>Bolo Kit Kat de Brigadeiro</p>
+                </div>
+                <button>R$: 20,00</button>
+            </div>
+
+        </section> 
+
+        <br/>
+        <br/>
+        <br/>
+
+        <!--Promoções Tortas-->
+        <section id="tortas">
+
+            <h3>Promoções Tortas</h3>
+            <br/>
+
+            <div class="quadro1">
+                <img src="Imagens/Promocoes_Tortas/Torta-Choco.png" alt="Tortas Top Bolos" title="Torta Chocolate"/>
+
+                <div class="nome">
+                    <p>Torta de Chocolate</p>
+                </div>
+                <button>R$: 20,00</button>
+            </div>
+
+            <div class="quadro2">
+                <img src="Imagens/Promocoes_Tortas/Torta-Cereja.png" alt="Tortas Top Bolos" title="Torta Cereja"/>
+
+                <div class="nome">
+                    <p>Torta de Cereja</p>
+                </div>
+                <button>R$: 20,00</button>
+            </div>
+
+            <div class="quadro3">
+                <img src="Imagens/Promocoes_Tortas/Torta-Amendoa.png" alt="Tortas Top Bolos" title="Torta Amêndoa"/>
+
+                <div class="nome">
+                    <p>Torta de Amêndoa</p>
+                </div>
+                <button>R$: 20,00</button>
+            </div>
+
+            <div class="quadro4">
+                <img src="Imagens/Promocoes_Tortas/Torta-Glace.png" alt="Tortas Top Bolos" title="Torta Glacê"/>
+
+                <div class="nome">
+                    <p>Torta com Glacê</p>
+                </div>
+                <button>R$: 20,00</button>
+            </div>
+
+        </section>
+
+        <br/>
+        <br/>
+        <br/>
+
+        <!--Promoções Doces-->
+        <section id="doces">
+
+            <h3>Promoções Doces</h3>
+            <br/>
+
+            <div class="quadro1">
+                <img src="Imagens/Promocoes_Doces/Donuts.png" alt="Donuts Top Bolos" title="Donuts Morango"/>
+
+                <div class="nome">
+                    <p>Donuts com cobertura Morango</p>
+                </div>
+                <button>R$: 20,00</button>
+            </div>
+
+            <div class="quadro2">
+                <img src="Imagens/Promocoes_Doces/Muffins.png" alt="Muffins Top Bolos" title="Muffins pedaços Chocolate"/>
+
+                <div class="nome">
+                    <p>Muffins pedaços Chocolate</p>
+                </div>
+                <button>R$: 20,00</button>
+            </div>
+
+            <div class="quadro3">
+                <img src="Imagens/Promocoes_Doces/Pudim.png" alt="Pudim Top Bolos" title="Pudim"/>
+
+                <div class="nome">
+                    <p>Pudim Leite Condensado</p>
+                </div>
+                <button>R$: 20,00</button>
+            </div>
+
+            <div class="quadro4">
+                <img src="Imagens/Promocoes_Doces/Burguer-Siri.png " alt="Hambúrguer de Siri Top Bolos" title="Hambúrguer de Siri"/>
+
+                <div class="nome">
+                    <p>Hambúrguer de Siri Colorido</p>
+                </div>
+                <button>R$: 20,00</button>
+            </div>
+        </section>
+
+        <br/>
+        <br/>
+        <br/>
+
+        <!--Rodapé-->
+        <footer>
+            <p>@2020 - Top Bolos®</p>
+        </footer>
+
+        <!-- Responsável pela movimentação e efeitos do Carrosel  -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
+        
