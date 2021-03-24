@@ -20,6 +20,94 @@
     </header>
 
     <br/>
+   
+        <form class="formulario" >
+            <table>
+                <tr>
+                <td id="titulo"> Preencha com seus dados: <br></td>
+                <td id="celulacolorida"></td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td>
+                        <label for="Nome">Nome: </label>
+                        <input type="text" id="Nome" name="Nome" size="75" maxlength="30"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="CPF">CPF:</label>
+                        <input type="number" id="CPF" name="CPF" size="75" maxlength="30"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="email">E-mail: </label>
+                        <input type="email" id="email" name="email" size="75" maxlength="30"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="Endereço">Endereço: </label>
+                        <input type="text" id="Endereço" name="Endereço" size="75" maxlength="30"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="Telefonefixo">Telefone: </label>
+                        <input type="number" id="Telefone" name="Telefone" size="75" maxlength="30"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="bolo">Nome Bolo: </label>
+                        <input type="text" id="bolo" name="bolo" size="75" maxlength="30"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pedido">Data Pedido: </label>
+                        <input type="date" id="pedido" name="pedido" size="75" maxlength="30"/>
+                    </td>
+                </tr>
+
+                <tr>                    
+                    <td>                     
+                        <label for="pg" id="alinhamentopg">Forma Pagamento: </label>
+                        
+                        <select id="pg" name="pg">
+                            <option selected disabled value="">--Selecione--</option>
+                            <option value="credito">Cartão de Credito</option>
+                            <option value="debito">Cartão de Debito</option>
+                            <option value="transferencia">Transferencia Bancaria</option>
+                            <option value="boleto">Boleto Bancario</option>
+                            <option value="Avista">Dinheiro</option>
+                            
+                        </select>
+                    </td>
+                </tr>
+                <br>
+                <br>
+                
+           
+                <tr>
+                
+                    <td colspan="2">
+                        <br>
+                        <br>
+                        <input class="botoes" type="submit" id="Confirmar" name="Confirmar" value="Confirmar"/> 
+                        
+                    </td>
+                </tr>
+       
+            </table>
+        </form>
 
     
 
