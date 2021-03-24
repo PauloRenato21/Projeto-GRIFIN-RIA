@@ -79,13 +79,19 @@ div.modal-body img{ /*Corpo do Modal - Imagem no Modal*/
     border-right: 2px ridge;
 }
 
+div.modal-body p.preco-modal{ /*Corpo do Modal - Preço no Modal*/
+    font-family: 'Domine', serif;
+    border-radius: 5px;
+    margin-top: 7%;
+}
+
 div.modal-body button{ /*Corpo do Modal - Botão no Modal*/
     font-family: 'Domine', serif;
     border: 1px solid;
     border-radius: 5px;
     padding: 5px;
-    margin-top: 15%;
 }
+
 
 /*Menu Lateral*/
 aside#menuLateral{
