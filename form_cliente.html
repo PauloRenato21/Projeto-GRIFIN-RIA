@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Css/StyleIndex.css"/>
+    <link rel="stylesheet" href="Css/form_cliente.css">
+    <title>Top Bolos | Cadastro Cliente</title>
+</head>
+<body>
+    <br/>
+        
+    <!--Logo-->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img id="logo" src="Imagens/Top_Bolos.png" alt="Top Bolos" title="Top Bolos"/></a>
+        </div>
+    </header>
+
+    <form class="formulario" >
+        <table>
+            <tr>
+            <td id="titulo"> Faça Seu Cadastro: <br></td>
+            <td id="celulacolorida"></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>
+                    <label for="Nome">Nome Completo: </label>
+                    <input type="text" id="Nome" name="Nome" size="75" maxlength="30"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="Nome">Login: </label>
+                    <input type="text" id="login" name="login" size="75" maxlength="30"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="Nome">Senha: </label>
+                    <input type="text" id="senha" name="senha" size="75" maxlength="30"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="CPF">CPF:</label>
+                    <input type="text" id="CPF" name="CPF" size="75" maxlength="30"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="email">E-mail: </label>
+                    <input type="email" id="email" name="email" size="75" maxlength="30"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="Endereço">Endereço: </label>
+                    <input type="text" id="Endereço" name="Endereço" size="75" maxlength="30"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="Telefonefixo">Telefone: </label>
+                    <input type="text" id="Telefone" name="Telefone" size="75" maxlength="30"/>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <label for="pedido">Data Nascimento: </label>
+                    <input type="date" id="date" name="date" size="75" maxlength="30"/>
+                </td>
+            </tr>
+
+            <tr>                    
+                <td>                     
+                    <label for="genero" id="alinhamentogenero">Gênero: </label>
+                    
+                    <select id="genero" name="genero">
+                        <option selected disabled value="">--Selecione--</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Indefinido">Indefinido</option>
+                        <option value="naodizer">Prefiro não dizer</option>
+                        
+                        
+                    </select>
+                </td>
+            </tr>
+            <br>
+            <br>
+            
+       
+            <tr>
+            
+                <td colspan="2">
+                    <br>
+                    <br>
+                    <input class="botoes" type="submit" id="Cadastrar" name="Cadastrar" value="Cadastrar"/> 
+                    
+                </td>
+            </tr>
+   
+        </table>
+    </form>
+    
+
+    <!--Rodapé-->
+    <footer>
+        <p>@2020 - Top Bolos®</p>
+    </footer>
+</body>
+</html>
