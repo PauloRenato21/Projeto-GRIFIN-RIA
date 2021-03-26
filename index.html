@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
+
+        <!-- POP-UP -->
+        <script type="text/javascript" src="pop-up/js/bioep.min.js"></script>
+    
+        <script type="text/javascript">
+          bioEp.init({
+            html: '<div id="bio_ep_content">' +
+            '<img src="Imagens/seta.png" width="50" alt="Participe" style="margin-right: 150px;" />' +
+            '<span></span>' +
+            '<span></span>' +
+            '<span></span>' +
+            '<a href="" target="_blank" class="bio_btn">Participar da Promoção &nbsp; <i class="fa fa-instagram"></i></a>' +
+            '</div>',
+            css: '#bio_ep {width: 400px; height: 400px; color: #333; background-color: #fcb3be; text-align: center;background-image: url(Imagens/oport.png);background-size: cover;}' +
+            '#bio_ep_content {padding: 255px 0 0 0; font-family: inherit;}' +
+            '#bio_ep_content span:nth-child(2) {display: block; color: #f21b1b; font-size: 32px; font-weight: 600;}' +
+            '#bio_ep_content span:nth-child(3) {display: block; font-size: 16px;}' +
+            '#bio_ep_content span:nth-child(4) {display: block; margin: -5px 0 0 0; font-size: 16px; font-weight: 600;}' +
+            '.bio_btn {display: inline-block; margin: 18px 0 0 0; padding: 8px 25px 8px 25px; color: #FFFFFF; font-size: 19px; font-weight: 900; background-color: #fcb3be; border: 1px solid #FFFFFF; cursor: pointer; -webkit-appearance: none; -moz-appearance: none; border-radius: 100px; text-decoration: none;}',
+            cookieExp: 0,
+            showOnDelay: true,
+            delay: 5
+    
+        });
+        </script>
+
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="bootstrap-4.5.3-dist/css/bootstrap.css"/>
@@ -69,7 +95,7 @@
 
                                     <div class="modal-body">
                                         <img src="Imagens/Carrosel/bolo-oreo.png" alt="Top Bolos" title="Bolo Oreo Top Bolos"/>
-                                        <button>R$: 20,00</button><br/>
+                                        <p class="preco-modal">R$: 20,00</p>
                                         <button>Comprar</button>
                                     </div>
 
@@ -94,7 +120,7 @@
 
                                     <div class="modal-body">
                                         <img src="Imagens/Carrosel/cupcake.png" alt="Top Bolos" title="Cupcake Top Bolos"/>
-                                        <button>R$: 20,00</button><br/>
+                                        <p class="preco-modal">R$: 20,00</p>
                                         <button>Comprar</button>
                                     </div>
 
@@ -120,7 +146,7 @@
 
                                     <div class="modal-body">
                                         <img src="Imagens/Carrosel/torta.png" alt="Top Bolos" title="Torta Floresta Negra"/>
-                                        <button>R$: 20,00</button><br/>
+                                        <p class="preco-modal">R$: 20,00</p>
                                         <button>Comprar</button>
                                     </div>
 
@@ -146,7 +172,7 @@
 
                                     <div class="modal-body">
                                         <img src="Imagens/Carrosel/trufas.png" alt="Top Bolos" title="Trufas Gourmet"/>
-                                        <button>R$: 20,00</button><br/>
+                                        <p class="preco-modal">R$: 20,00</p>
                                         <button>Comprar</button>
                                     </div>
 
@@ -199,108 +225,39 @@
             <br/>
             <!--Bolo com Morango-->
             <div class="quadro1">
-                <img src="Imagens/Promocoes_Bolos/Bolo-Cobertuta.png" alt="Bolos Top Bolos" title="Bolo Cobertura Morango" data-toggle="modal" data-target="#quintoModal"/>
-                
                 <div class="nome">
                     <p>Bolo com Morango</p>
                 </div>
-                <div class="modal fade" id="quintoModal" role="dialog">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <div class="modal-header">
-                                <h3>Bolo com Morango</h3>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <div class="modal-body">
-                                <img src="Imagens/Promocoes_Bolos/Bolo-Cobertuta.png" alt="Top Bolos" title="Bolo Cobertura Morango"/>
-                                <button>R$: 20,00</button><br/>
-                                <button>Comprar</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                
+                <img src="Imagens/Promocoes_Bolos/Bolo-Cobertuta.png" alt="Bolos Top Bolos" title="Bolo Cobertura Morango"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>
             </div>
             <!--Bolo Surpresa Kit Kat-->
             <div class="quadro2">
-                <img src="Imagens/Promocoes_Bolos/Bolo-Surpresa.png" alt="Bolos Top Bolos" title="Bolo Surpresa" data-toggle="modal" data-target="#sextoModal"/>
-
                 <div class="nome">
                     <p>Bolo Surpresa Kit Kat</p>
                 </div>
-                <div class="modal fade" id="sextoModal" role="dialog">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <div class="modal-header">
-                                <h3>Bolo Surpresa Kit Kat</h3>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <div class="modal-body">
-                                <img src="Imagens/Promocoes_Bolos/Bolo-Surpresa.png" alt="Top Bolos" title="Bolo Surpresa Kit Kat"/>
-                                <button>R$: 20,00</button><br/>
-                                <button>Comprar</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                <img src="Imagens/Promocoes_Bolos/Bolo-Surpresa.png" alt="Bolos Top Bolos" title="Bolo Surpresa"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>                
             </div>
             <!--Bolo de Aniversário-->
             <div class="quadro3">
-                <img src="Imagens/Promocoes_Bolos/Bolo-Aniver.png" alt="Bolos Top Bolos" title="Bolo Aniversário" data-toggle="modal" data-target="#setimoModal"/>
-
                 <div class="nome">
                     <p>Bolo de Aniversário</p>
-                </div>
-                <div class="modal fade" id="setimoModal" role="dialog">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <div class="modal-header">
-                                <h3>Bolo de Aniversário</h3>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <div class="modal-body">
-                                <img src="Imagens/Promocoes_Bolos/Bolo-Aniver.png" alt="Top Bolos" title="Bolo de Aniversário"/>
-                                <button>R$: 20,00</button><br/>
-                                <button>Comprar</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                </div>     
+                <img src="Imagens/Promocoes_Bolos/Bolo-Aniver.png" alt="Bolos Top Bolos" title="Bolo Aniversário"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>                              
             </div>
             <!--Bolo Kit Kat de Brigadeiro-->
             <div class="quadro4">
-                <img src="Imagens/Promocoes_Bolos/Bolo-KitKat.png" alt="Bolos Top Bolos" title="Bolo Kit Kat Brigadeiro" data-toggle="modal" data-target="#oitavoModal"/>
-
                 <div class="nome">
                     <p>Bolo Kit Kat de Brigadeiro</p>
-                </div>
-                <div class="modal fade" id="oitavoModal" role="dialog">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <div class="modal-header">
-                                <h3>Bolo Kit Kat de Brigadeiro</h3>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <div class="modal-body">
-                                <img src="Imagens/Promocoes_Bolos/Bolo-KitKat.png" alt="Top Bolos" title="Bolo Kit Kat Brigadeiro"/>
-                                <button>R$: 20,00</button><br/>
-                                <button>Comprar</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                </div>    
+                <img src="Imagens/Promocoes_Bolos/Bolo-KitKat.png" alt="Bolos Top Bolos" title="Bolo Kit Kat Brigadeiro"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>               
             </div>
 
         </section> 
@@ -316,107 +273,39 @@
             <br/>
             <!--Torta de Chocolate-->
             <div class="quadro1">
-                <img src="Imagens/Promocoes_Tortas/Torta-Choco.png" alt="Tortas Top Bolos" title="Torta Chocolate" data-toggle="modal" data-target="#nonoModal"/>
-
                 <div class="nome">
                     <p>Torta de Chocolate</p>
-                </div>
-                <div class="modal fade" id="nonoModal" role="dialog">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <div class="modal-header">
-                                <h3>Torta de Chocolate</h3>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <div class="modal-body">
-                                <img src="Imagens/Promocoes_Tortas/Torta-Choco.png" alt="Top Bolos" title="Torta Chocolate" />
-                                <button>R$: 20,00</button><br/>
-                                <button>Comprar</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                </div>       
+                <img src="Imagens/Promocoes_Tortas/Torta-Choco.png" alt="Tortas Top Bolos" title="Torta Chocolate"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>           
             </div>
             <!--Torta de Cereja-->
             <div class="quadro2">
-                <img src="Imagens/Promocoes_Tortas/Torta-Cereja.png" alt="Tortas Top Bolos" title="Torta Cereja" data-toggle="modal" data-target="#decimoModal"/>
-
                 <div class="nome">
                     <p>Torta de Cereja</p>
                 </div>
-                <div class="modal fade" id="decimoModal" role="dialog">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <div class="modal-header">
-                                <h3>Torta de Cereja</h3>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <div class="modal-body">
-                                <img src="Imagens/Promocoes_Tortas/Torta-Cereja.png" alt="Top Bolos" title="Torta Cereja" />
-                                <button>R$: 20,00</button><br/>
-                                <button>Comprar</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                <img src="Imagens/Promocoes_Tortas/Torta-Cereja.png" alt="Tortas Top Bolos" title="Torta Cereja"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>   
             </div>
             <!--Torta de Amêndoa-->
             <div class="quadro3">
-                <img src="Imagens/Promocoes_Tortas/Torta-Amendoa.png" alt="Tortas Top Bolos" title="Torta Amêndoa" data-toggle="modal" data-target="#decimoprimeiroModal"/>
-
                 <div class="nome">
                     <p>Torta de Amêndoa</p>
                 </div>
-                <div class="modal fade" id="decimoprimeiroModal" role="dialog">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <div class="modal-header">
-                                <h3>Torta de Amêndoa</h3>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <div class="modal-body">
-                                <img src="Imagens/Promocoes_Tortas/Torta-Amendoa.png" alt="Top Bolos" title="Torta Amêndoa" />
-                                <button>R$: 20,00</button><br/>
-                                <button>Comprar</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                <img src="Imagens/Promocoes_Tortas/Torta-Amendoa.png" alt="Tortas Top Bolos" title="Torta Amêndoa"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>   
             </div>
             <!--Torta com Glacê-->
             <div class="quadro4">
-                <img src="Imagens/Promocoes_Tortas/Torta-Glace.png" alt="Tortas Top Bolos" title="Torta Glacê" data-toggle="modal" data-target="#decimosecundoModal"/>
-
                 <div class="nome">
                     <p>Torta com Glacê</p>
                 </div>
-                <div class="modal fade" id="decimosecundoModal" role="dialog">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <div class="modal-header">
-                                <h3>Torta com Glacê</h3>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <div class="modal-body">
-                                <img src="Imagens/Promocoes_Tortas/Torta-Glace.png" alt="Top Bolos" title="Torta Glacê" />
-                                <button>R$: 20,00</button><br/>
-                                <button>Comprar</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                <img src="Imagens/Promocoes_Tortas/Torta-Glace.png" alt="Tortas Top Bolos" title="Torta Glacê"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>   
             </div>
 
         </section>
@@ -432,112 +321,44 @@
             <br/>
             <!--Donuts com cobertura Morango-->
             <div class="quadro1">
-                <img src="Imagens/Promocoes_Doces/Donuts.png" alt="Donuts Top Bolos" title="Donuts Morango" data-toggle="modal" data-target="#decimoterceiroModal"/>
-
                 <div class="nome">
                     <p>Donuts com cobertura Morango</p>
                 </div>
-                <div class="modal fade" id="decimoterceiroModal" role="dialog">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <div class="modal-header">
-                                <h3>Donuts com cobertura Morango</h3>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <div class="modal-body">
-                                <img src="Imagens/Promocoes_Doces/Donuts.png" alt="Top Bolos" title="Donuts Morango" />
-                                <button>R$: 20,00</button><br/>
-                                <button>Comprar</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                <img src="Imagens/Promocoes_Doces/Donuts.png" alt="Donuts Top Bolos" title="Donuts Morango"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>   
             </div>
 
             </div>
             <!--Muffins pedaços Chocolate-->
             <div class="quadro2">
-                <img src="Imagens/Promocoes_Doces/Muffins.png" alt="Muffins Top Bolos" title="Muffins pedaços Chocolate" data-toggle="modal" data-target="#decimoquartoModal"/>
-
                 <div class="nome">
                     <p>Muffins pedaços Chocolate</p>
                 </div>
-                <div class="modal fade" id="decimoquartoModal" role="dialog">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <div class="modal-header">
-                                <h3>Muffins pedaços Chocolate</h3>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <div class="modal-body">
-                                <img src="Imagens/Promocoes_Doces/Muffins.png" alt="Top Bolos" title="Muffins pedaços Chocolate"/>
-                                <button>R$: 20,00</button><br/>
-                                <button>Comprar</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                <img src="Imagens/Promocoes_Doces/Muffins.png" alt="Muffins Top Bolos" title="Muffins pedaços Chocolate"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>                  
             </div>
 
             </div>
             <!--Pudim Leite Condensado-->
             <div class="quadro3">
-                <img src="Imagens/Promocoes_Doces/Pudim.png" alt="Pudim Top Bolos" title="Pudim" data-toggle="modal" data-target="#decimoquintoModal"/>
-
                 <div class="nome">
                     <p>Pudim Leite Condensado</p>
-                </div>
-                <div class="modal fade" id="decimoquintoModal" role="dialog">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <div class="modal-header">
-                                <h3>Pudim Leite Condensado</h3>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <div class="modal-body">
-                                <img src="Imagens/Promocoes_Doces/Pudim.png" alt="Top Bolos" title="Pudim" />
-                                <button>R$: 20,00</button><br/>
-                                <button>Comprar</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                </div>   
+                <img src="Imagens/Promocoes_Doces/Pudim.png" alt="Pudim Top Bolos" title="Pudim"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>   
             </div>
             </div>
             <!--Hambúrguer de Siri Colorido-->
             <div class="quadro4">
-                <img src="Imagens/Promocoes_Doces/Burguer-Siri.png " alt="Hambúrguer de Siri Top Bolos" title="Hambúrguer de Siri" data-toggle="modal" data-target="#decimosextoModal"/>
-
                 <div class="nome">
                     <p>Hambúrguer de Siri Colorido</p>
-                </div>
-                <div class="modal fade" id="decimosextoModal" role="dialog">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <div class="modal-header">
-                                <h3>Hambúrguer de Siri Colorido</h3>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <div class="modal-body">
-                                <img src="Imagens/Promocoes_Doces/Burguer-Siri.png " alt="Top Bolos" title="Hambúrguer de Siri Top Bolos" />
-                                <button>R$: 20,00</button><br/>
-                                <button>Comprar</button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                </div>  
+                <img src="Imagens/Promocoes_Doces/Burguer-Siri.png " alt="Hambúrguer de Siri Top Bolos" title="Hambúrguer de Siri"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>                                
             </div>
             </div>
         </section>
