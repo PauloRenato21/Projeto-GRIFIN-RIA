@@ -156,7 +156,7 @@ aside#menuLateral p{
 }
 
 /*Divs Promoções Tamanho dos Pais*/
-section#bolos, section#tortas, section#doces{
+header, section#bolos, section#tortas, section#doces{
     overflow: hidden;
 }
 
