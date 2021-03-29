@@ -14,20 +14,55 @@ body{
 
 /*Div Logo*/
 header div.logo{
-    width: 100%;
+    float: left;
+    width: 90%;
     text-align: center;
 }
 
 header div.logo a{
-    margin-left: 80px;
+    margin-left: 130px;
 }
 
-img.cesta{
+div.login{
     float: right;
-    margin-right: 20px;
+    width: 10%;
+    height: 150px;
 }
-img.cesta:hover{
-    cursor: pointer;
+
+div.login img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.login button{
+    border: 2px solid black;
+    padding: 1px 15px; 
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-family: 'Domine', serif;
+    font-size: 15px;
+    background-color: #f8e6e5;
+}
+
+div.login button a{
+    color: black;
+    text-decoration: none;
+}
+
+div.login button:hover{
+    outline: none;
+    text-decoration: none;
+    border-color: #F17873;
+    color: rgb(250, 88, 115);
+}
+
+div.login a:hover{
+    text-decoration: none;
+    color: rgb(250, 88, 115);
 }
 
 /*Menu superior*/
@@ -79,12 +114,31 @@ div.modal-body img{ /*Corpo do Modal - Imagem no Modal*/
     border-right: 2px ridge;
 }
 
-div.modal-body button{ /*Corpo do Modal - Botão no Modal*/
+div.modal-body p.preco-modal{ /*Corpo do Modal - Preço no Modal*/
     font-family: 'Domine', serif;
-    border: 1px solid;
     border-radius: 5px;
-    padding: 5px;
-    margin-top: 15%;
+    margin-top: 7%;
+}
+
+div.modal-body button{ /*Corpo do Modal - Botão de compra*/
+    font-family: 'Domine', serif;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 1px 10px;
+    outline: none;
+}
+
+div.modal-body button:hover{ /*Corpo do Modal - Cursor no Botão de compra*/
+    border-color: #F17873;
+}
+
+div.modal-body button a{ /*Corpo do Modal - Ancora no Botão de compra*/
+    color: black;
+}
+
+div.modal-body button a:hover{ /*Corpo do Modal - Cursor na ancora do Botão de compra*/
+    text-decoration: none;
+    color: rgb(250, 88, 115);
 }
 
 /*Menu Lateral*/
@@ -104,7 +158,7 @@ aside#menuLateral p{
 }
 
 /*Divs Promoções Tamanho dos Pais*/
-section#bolos, section#tortas, section#doces{
+header, section#bolos, section#tortas, section#doces{
     overflow: hidden;
 }
 
@@ -147,16 +201,24 @@ section#bolos button, section#tortas button, section#doces button{
     margin-bottom: 5%;
 }
 
+section#bolos button a, section#tortas button a, section#doces button a{
+    color: black;
+}
+
 section#bolos button:hover, section#tortas button:hover, section#doces button:hover{
    background-color: #fccccb;
 }
+
+section#bolos button a:hover, section#tortas button a:hover, section#doces button a:hover{
+    text-decoration: none;
+ }
 
 section#bolos div.quadro1, section#bolos div.quadro3, section#tortas div.quadro1, section#tortas div.quadro3, section#doces div.quadro1, section#doces div.quadro3{
     float: left;
     margin-left: 7%;
     text-align: center;
     width: 38%;
-    margin-bottom: 1%;
+    margin-bottom: 3%;
 }
 
 section#bolos div.quadro2, section#bolos div.quadro4, section#tortas div.quadro2, section#tortas div.quadro4, section#doces div.quadro2, section#doces div.quadro4{
@@ -164,7 +226,7 @@ section#bolos div.quadro2, section#bolos div.quadro4, section#tortas div.quadro2
     margin-left: 10%;
     width: 38%; 
     text-align: center;
-    margin-bottom: 1%;
+    margin-bottom: 3%;
 }
 
 /*Rodapé*/
