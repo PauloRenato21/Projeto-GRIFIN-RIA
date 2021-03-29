@@ -125,6 +125,21 @@ div.modal-body button{ /*Corpo do Modal - Botão no Modal*/
     border: 2px solid;
     border-radius: 5px;
     padding: 5px;
+    outline: none;
+}
+
+div.modal-body button:hover{
+    border-color: #F17873;
+}
+
+div.modal-body button a{
+    color: black;
+}
+
+div.modal-body button a:hover{ /*Corpo do Modal - Botão no Modal*/
+    font-family: 'Domine', serif;
+    text-decoration: none;
+    color: rgb(250, 88, 115);
 }
 
 /*Menu Lateral*/
@@ -175,6 +190,12 @@ section div.nome p{
     margin: 5% 0%;
 }
 
+p.preco{
+    font-family: 'Domine', serif;
+    font-size: 20px;
+    margin-top: 5%;
+}
+
 section#bolos button, section#tortas button, section#doces button{
     width: 70%;
     border: 2px solid black;
@@ -183,7 +204,7 @@ section#bolos button, section#tortas button, section#doces button{
     text-align: center;
     font-family: 'Domine', serif;
     font-size: 120%;
-    margin-top: 2%;
+    margin-top: 1%;
     margin-bottom: 15%;
 
 }
@@ -220,7 +241,6 @@ section#bolos div.quadro2, section#bolos div.quadro4, section#tortas div.quadro2
 footer{
     height: auto;
     border-top: 1px solid;
-    border-bottom: 1px solid;
 }
 
 footer p{
