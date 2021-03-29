@@ -120,25 +120,11 @@ div.modal-body p.preco-modal{ /*Corpo do Modal - Preço no Modal*/
     margin-top: 7%;
 }
 
-div.modal-body button{ /*Corpo do Modal - Botão de compra*/
+div.modal-body button{ /*Corpo do Modal - Botão no Modal*/
     font-family: 'Domine', serif;
     border: 2px solid;
     border-radius: 5px;
-    padding: 1px 10px;
-    outline: none;
-}
-
-div.modal-body button:hover{ /*Corpo do Modal - Cursor no Botão de compra*/
-    border-color: #F17873;
-}
-
-div.modal-body button a{ /*Corpo do Modal - Ancora no Botão de compra*/
-    color: black;
-}
-
-div.modal-body button a:hover{ /*Corpo do Modal - Cursor na ancora do Botão de compra*/
-    text-decoration: none;
-    color: rgb(250, 88, 115);
+    padding: 5px;
 }
 
 /*Menu Lateral*/
@@ -198,7 +184,8 @@ section#bolos button, section#tortas button, section#doces button{
     font-family: 'Domine', serif;
     font-size: 120%;
     margin-top: 2%;
-    margin-bottom: 5%;
+    margin-bottom: 15%;
+
 }
 
 section#bolos button a, section#tortas button a, section#doces button a{
@@ -232,8 +219,8 @@ section#bolos div.quadro2, section#bolos div.quadro4, section#tortas div.quadro2
 /*Rodapé*/
 footer{
     height: auto;
-    padding: 10px;
     border-top: 1px solid;
+    border-bottom: 1px solid;
 }
 
 footer p{

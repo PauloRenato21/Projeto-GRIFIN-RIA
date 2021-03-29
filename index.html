@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
+
+        <!-- POP-UP -->
+        <script type="text/javascript" src="pop-up/js/bioep.min.js"></script>
+    
+        <script type="text/javascript">
+          bioEp.init({
+            html: '<div id="bio_ep_content">' +
+            '<img src="Imagens/seta.png" width="50" alt="Participe" style="margin-right: 150px;" />' +
+            '<span></span>' +
+            '<span></span>' +
+            '<span></span>' +
+            '<a href="#" class="bio_btn">Participar da Promoção &nbsp;</a>' +
+            '</div>',
+            css: '#bio_ep {width: 400px; height: 400px; color: #333; background-color: #fcb3be; text-align: center;background-image: url(Imagens/oport.png);background-size: cover;}' +
+            '#bio_ep_content {padding: 255px 0 0 0; font-family: inherit;}' +
+            '#bio_ep_content span:nth-child(2) {display: block; color: #f21b1b; font-size: 32px; font-weight: 600;}' +
+            '#bio_ep_content span:nth-child(3) {display: block; font-size: 16px;}' +
+            '#bio_ep_content span:nth-child(4) {display: block; margin: -5px 0 0 0; font-size: 16px; font-weight: 600;}' +
+            '.bio_btn {display: inline-block; margin: 18px 0 0 0; padding: 8px 25px 8px 25px; color: #FFFFFF; font-size: 19px; font-weight: 900; background-color: #fcb3be; border: 1px solid #FFFFFF; cursor: pointer; -webkit-appearance: none; -moz-appearance: none; border-radius: 100px; text-decoration: none;}'+
+            'a.bio_btn:hover{text-decoration:none;color:black;}',
+            cookieExp: 0,
+            showOnDelay: true,
+            delay: 5
+    
+        });
+        </script>
+
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="bootstrap-4.5.3-dist/css/bootstrap.css"/>
@@ -200,41 +227,41 @@
             
             <h3>Promoções Bolos </h3>
             <br/>
-
+            <!--Bolo com Morango-->
             <div class="quadro1">
-                <img src="Imagens/Promocoes_Bolos/Bolo-Cobertuta.png" alt="Bolos Top Bolos" title="Bolo Cobertura Morango"/>
-                
                 <div class="nome">
                     <p>Bolo com Morango</p>
                 </div>
-                <button><a href="#">R$: 20,00</a></button>
+                <img src="Imagens/Promocoes_Bolos/Bolo-Cobertuta.png" alt="Bolos Top Bolos" title="Bolo Cobertura Morango"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>
             </div>
-
+            <!--Bolo Surpresa Kit Kat-->
             <div class="quadro2">
-                <img src="Imagens/Promocoes_Bolos/Bolo-Surpresa.png" alt="Bolos Top Bolos" title="Bolo Surpresa"/>
-
                 <div class="nome">
                     <p>Bolo Surpresa Kit Kat</p>
                 </div>
-                <button><a href="#">R$: 20,00</a></button>
+                <img src="Imagens/Promocoes_Bolos/Bolo-Surpresa.png" alt="Bolos Top Bolos" title="Bolo Surpresa"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>                
             </div>
-
+            <!--Bolo de Aniversário-->
             <div class="quadro3">
-                <img src="Imagens/Promocoes_Bolos/Bolo-Aniver.png" alt="Bolos Top Bolos" title="Bolo Aniversário"/>
-
                 <div class="nome">
                     <p>Bolo de Aniversário</p>
-                </div>
-                <button><a href="#">R$: 20,00</a></button>
+                </div>     
+                <img src="Imagens/Promocoes_Bolos/Bolo-Aniver.png" alt="Bolos Top Bolos" title="Bolo Aniversário"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>                              
             </div>
-
+            <!--Bolo Kit Kat de Brigadeiro-->
             <div class="quadro4">
-                <img src="Imagens/Promocoes_Bolos/Bolo-KitKat.png" alt="Bolos Top Bolos" title="Bolo Kit Kat Brigadeiro"/>
-
                 <div class="nome">
                     <p>Bolo Kit Kat de Brigadeiro</p>
-                </div>
-                <button><a href="#">R$: 20,00</a></button>
+                </div>    
+                <img src="Imagens/Promocoes_Bolos/Bolo-KitKat.png" alt="Bolos Top Bolos" title="Bolo Kit Kat Brigadeiro"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>               
             </div>
 
         </section> 
@@ -248,41 +275,41 @@
 
             <h3>Promoções Tortas</h3>
             <br/>
-
+            <!--Torta de Chocolate-->
             <div class="quadro1">
-                <img src="Imagens/Promocoes_Tortas/Torta-Choco.png" alt="Tortas Top Bolos" title="Torta Chocolate"/>
-
                 <div class="nome">
                     <p>Torta de Chocolate</p>
-                </div>
-                <button><a href="#">R$: 20,00</a></button>
+                </div>       
+                <img src="Imagens/Promocoes_Tortas/Torta-Choco.png" alt="Tortas Top Bolos" title="Torta Chocolate"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>           
             </div>
-
+            <!--Torta de Cereja-->
             <div class="quadro2">
-                <img src="Imagens/Promocoes_Tortas/Torta-Cereja.png" alt="Tortas Top Bolos" title="Torta Cereja"/>
-
                 <div class="nome">
                     <p>Torta de Cereja</p>
                 </div>
-                <button><a href="#">R$: 20,00</a></button>
+                <img src="Imagens/Promocoes_Tortas/Torta-Cereja.png" alt="Tortas Top Bolos" title="Torta Cereja"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>   
             </div>
-
+            <!--Torta de Amêndoa-->
             <div class="quadro3">
-                <img src="Imagens/Promocoes_Tortas/Torta-Amendoa.png" alt="Tortas Top Bolos" title="Torta Amêndoa"/>
-
                 <div class="nome">
                     <p>Torta de Amêndoa</p>
                 </div>
-                <button><a href="#">R$: 20,00</a></button>
+                <img src="Imagens/Promocoes_Tortas/Torta-Amendoa.png" alt="Tortas Top Bolos" title="Torta Amêndoa"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>   
             </div>
-
+            <!--Torta com Glacê-->
             <div class="quadro4">
-                <img src="Imagens/Promocoes_Tortas/Torta-Glace.png" alt="Tortas Top Bolos" title="Torta Glacê"/>
-
                 <div class="nome">
                     <p>Torta com Glacê</p>
                 </div>
-                <button><a href="#">R$: 20,00</a></button>
+                <img src="Imagens/Promocoes_Tortas/Torta-Glace.png" alt="Tortas Top Bolos" title="Torta Glacê"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>   
             </div>
 
         </section>
@@ -296,41 +323,47 @@
 
             <h3>Promoções Doces</h3>
             <br/>
-
+            <!--Donuts com cobertura Morango-->
             <div class="quadro1">
-                <img src="Imagens/Promocoes_Doces/Donuts.png" alt="Donuts Top Bolos" title="Donuts Morango"/>
-
                 <div class="nome">
                     <p>Donuts com cobertura Morango</p>
                 </div>
-                <button><a href="#">R$: 20,00</a></button>
+                <img src="Imagens/Promocoes_Doces/Donuts.png" alt="Donuts Top Bolos" title="Donuts Morango"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>   
             </div>
 
+            </div>
+            <!--Muffins pedaços Chocolate-->
             <div class="quadro2">
-                <img src="Imagens/Promocoes_Doces/Muffins.png" alt="Muffins Top Bolos" title="Muffins pedaços Chocolate"/>
-
                 <div class="nome">
                     <p>Muffins pedaços Chocolate</p>
                 </div>
-                <button><a href="#">R$: 20,00</a></button>
+                <img src="Imagens/Promocoes_Doces/Muffins.png" alt="Muffins Top Bolos" title="Muffins pedaços Chocolate"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>                  
             </div>
 
+            </div>
+            <!--Pudim Leite Condensado-->
             <div class="quadro3">
-                <img src="Imagens/Promocoes_Doces/Pudim.png" alt="Pudim Top Bolos" title="Pudim"/>
-
                 <div class="nome">
                     <p>Pudim Leite Condensado</p>
-                </div>
-                <button><a href="#">R$: 20,00</a></button>
+                </div>   
+                <img src="Imagens/Promocoes_Doces/Pudim.png" alt="Pudim Top Bolos" title="Pudim"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>   
             </div>
-
+            </div>
+            <!--Hambúrguer de Siri Colorido-->
             <div class="quadro4">
-                <img src="Imagens/Promocoes_Doces/Burguer-Siri.png " alt="Hambúrguer de Siri Top Bolos" title="Hambúrguer de Siri"/>
-
                 <div class="nome">
                     <p>Hambúrguer de Siri Colorido</p>
-                </div>
-                <button><a href="#">R$: 20,00</a></button>
+                </div>  
+                <img src="Imagens/Promocoes_Doces/Burguer-Siri.png " alt="Hambúrguer de Siri Top Bolos" title="Hambúrguer de Siri"/>
+                <p class="preco-modal">R$: 20,00</p>
+                <button>Comprar</button>                                
+            </div>
             </div>
         </section>
 
