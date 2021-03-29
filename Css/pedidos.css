@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/*Cabeçalho da página*/
+header{
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+header div.logo{
+    width: 100%;
+} 
+
+header div.logo a{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Domine', serif;
+}
+
+div#main{ /*Div do conteudo dos pedidos */
+    /* border: 1px solid blue; */
+    margin: 40px 0px;
+    width: auto;
+    height: auto;
+}
+
+div.pedidos{ /*div que armazena as div's dos pedidos*/
+    /* border: 1px solid red; */
+    overflow: hidden;
+    margin: 10px;
+    width: auto;
+    height: auto;
+}
+
+div.pedidos div{ /*div do pedido*/
+    border: 2px solid black;
+    margin-top: 40px;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    width: 30%;
+    height: auto;
+    float: left;
+    box-shadow: 3px 0px 10px black;
+}
+
+h3{
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 22px;
+    font-family: 'Domine', serif;
+}
+
+p{
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
