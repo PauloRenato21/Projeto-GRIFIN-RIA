@@ -13,7 +13,7 @@
     <main class="container">
 
         <h2>Pedido:</h2>
-        <form action="" method="">
+        <form action="php/enviapedido.php" method="POST">
 
             <div class="input-field">
                 <input type="text" name="nomecompleto" id="nomecompleto"
@@ -65,15 +65,14 @@
             
             <div class="input-field">
                 <label for="pg" id="alinhamentopg">Forma Pagamento: </label>
-                        
-                        <select id="pg" name="pg">
-                            <option selected disabled value="">--Selecione--</option>
-                            <option value="credito">Cartão de Credito</option>
-                            <option value="debito">Cartão de Debito</option>
-                            <option value="transferencia">Transferencia Bancaria</option>
-                            <option value="boleto">Boleto Bancario</option>
-                            <option value="Avista">Dinheiro</option>                            
-                        </select>
+                <select id="pg" name="pg">
+                    <option selected disabled value="">--Selecione--</option>
+                    <option value="credito">Cartão de Credito</option>
+                    <option value="debito">Cartão de Debito</option>
+                    <option value="transferencia">Transferencia Bancaria</option>
+                    <option value="boleto">Boleto Bancario</option>
+                    <option value="Avista">Dinheiro</option>                            
+                </select>
             </div>
             <br>
 
