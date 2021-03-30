@@ -4,89 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/StyleIndex.css">
-    <link rel="stylesheet" href="Css/styleform.css">
-    <link rel="shortcut icon" href="Imagens/Top_Bolos.png" type="image/png"/>
-    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap" rel="stylesheet"/>
-    <title>Top Bolos | Formulario Pedido</title>
+    
+    <link rel="stylesheet" href="Css/admin.css"/>
+    <title>Formulario Pedido</title>
 </head>
 <body>
-    <br/>
-        
-    <!--Logo-->
-    <header>
-        <div class="logo">
-            <a href="index.html"><img id="logo" src="Imagens/Top_Bolos.png" alt="Top Bolos" title="Top Bolos"/></a>
-        </div>
-        <div class="login">
-            <img src="Imagens/icone-Top_Bolos.png" alt="Top Bolos Cesta" title="Comprar"/>
-            <button><a href="#">Login</a></button>
-        </div>  
-    </header>
 
-    <br/>
-   
-        <form class="formulario" >
-            <table>
-                <tr>
-                <td id="titulo"> Preencha com seus dados: <br></td>
-                <td id="celulacolorida"></td>
-                </tr>
-            </table>
+    <main class="container">
 
-            <table>
-                <tr>
-                    <td>
-                        <label for="Nome">Nome: </label>
-                        <input type="text" id="Nome" name="Nome" size="75" maxlength="30"/>
-                    </td>
-                </tr>
+        <h2>Pedido:</h2>
+        <form action="" method="">
 
-                <tr>
-                    <td>
-                        <label for="CPF">CPF:</label>
-                        <input type="text" id="CPF" name="CPF" size="75" maxlength="30"/>
-                    </td>
-                </tr>
+            <div class="input-field">
+                <input type="text" name="nomecompleto" id="nomecompleto"
+                    placeholder="Digite seu Nome">
+                <div class="underline"></div>
+            </div>
+            
 
-                <tr>
-                    <td>
-                        <label for="email">E-mail: </label>
-                        <input type="email" id="email" name="email" size="75" maxlength="30"/>
-                    </td>
-                </tr>
+            <div class="input-field">
+                <input type="text" name="cpf" id="cpf"
+                    placeholder="Digite seu CPF">
+                <div class="underline"></div>
+            </div>
+            <br>
 
-                <tr>
-                    <td>
-                        <label for="Endereço">Endereço: </label>
-                        <input type="text" id="Endereço" name="Endereço" size="75" maxlength="30"/>
-                    </td>
-                </tr>
+            <div class="input-field">
+                <input type="email" name="email" id="email"
+                    placeholder="Digite seu E-mail">
+                <div class="underline"></div>
+            </div>
+            <br>
 
-                <tr>
-                    <td>
-                        <label for="Telefonefixo">Telefone: </label>
-                        <input type="text" id="Telefone" name="Telefone" size="75" maxlength="30"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="bolo">Nome Bolo: </label>
-                        <input type="text" id="bolo" name="bolo" size="75" maxlength="30"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="pedido">Data Pedido: </label>
-                        <input type="date" id="pedido" name="pedido" size="75" maxlength="30"/>
-                    </td>
-                </tr>
+            <div class="input-field">
+                <input type="text" name="endereco" id="endereco"
+                    placeholder="Digite seu Endereço">
+                <div class="underline"></div>
+            </div>
+            <br>
+            
+            <div class="input-field">
+                <input type="text" name="telefone" id="telefone"
+                    placeholder="Digite seu Telefone">
+                <div class="underline"></div>
+            </div>
+            <br>
 
-                <tr>                    
-                    <td>                     
-                        <label for="pg" id="alinhamentopg">Forma Pagamento: </label>
+            <div class="input-field">
+                <input type="text" name="nomebolo" id="nomebolo"
+                    placeholder="Digite o Nome do Bolo">
+                <div class="underline"></div>
+            </div>
+            <br>
+
+            <div class="input-field">
+                <input type="date" name="data" id="data">
+                <div class="underline"></div>
+            </div>
+            <br>
+            
+            <div class="input-field">
+                <label for="pg" id="alinhamentopg">Forma Pagamento: </label>
                         
                         <select id="pg" name="pg">
                             <option selected disabled value="">--Selecione--</option>
@@ -94,37 +72,14 @@
                             <option value="debito">Cartão de Debito</option>
                             <option value="transferencia">Transferencia Bancaria</option>
                             <option value="boleto">Boleto Bancario</option>
-                            <option value="Avista">Dinheiro</option>
-                            
+                            <option value="Avista">Dinheiro</option>                            
                         </select>
-                    </td>
-                </tr>
-                <br>
-                <br>
-                
-           
-                <tr>
-                
-                    <td colspan="2">
-                        <br>
-                        <br>
-                        <input class="botoes" type="submit" id="Confirmar" name="Confirmar" value="Confirmar"/> 
-                        
-                    </td>
-                </tr>
-       
-            </table>
+            </div>
+            <br>
+
+            <input type="submit" value="Enviar">
+
         </form>
-
-    
-
-
-
-
-
-    <!--Rodapé-->
-    <footer>
-        <p>@2020 - Top Bolos®</p>
-    </footer>
+    </main>
 </body>
 </html>
