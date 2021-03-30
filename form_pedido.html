@@ -4,23 +4,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/StyleIndex.css">
-    <link rel="stylesheet" href="Css/styleform.css">
+    
+    <link rel="stylesheet" href="Css/admin.css">
     <title>Formulario Pedido</title>
 </head>
 <body>
-    <br/>
-        
-    <!--Logo-->
-    <header>
-        <div class="logo">
-            <a href="index.html"><img id="logo" src="Imagens/Top_Bolos.png" alt="Top Bolos" title="Top Bolos"/></a>
-        </div>
-    </header>
 
-    <br/>
+    <main class="container">
+
+        <h2>Pedido:</h2>
+        <form action="">
+
+            <div class="input-field">
+                <input type="text" name="nomecompleto" id="nomecompleto"
+                    placeholder="Digite seu Nome">
+                <div class="underline"></div>
+            </div>
+            
+
+            <div class="input-field">
+                <input type="text" name="login" id="login"
+                    placeholder="Digite seu Login">
+                <div class="underline"></div>
+            </div>
+            <br>
+            
+            <div class="input-field">
+                <input type="password" name="senha" id="losenhagin"
+                    placeholder="Digite sua Senha">
+                <div class="underline"></div>
+            </div>
+            <br>
+
+            <div class="input-field">
+                <input type="text" name="cpf" id="cpf"
+                    placeholder="Digite seu CPF">
+                <div class="underline"></div>
+            </div>
+            <br>
+
+            <div class="input-field">
+                <input type="email" name="email" id="email"
+                    placeholder="Digite seu E-mail">
+                <div class="underline"></div>
+            </div>
+            <br>
+
+            <div class="input-field">
+                <input type="text" name="endereco" id="endereco"
+                    placeholder="Digite seu Endereço">
+                <div class="underline"></div>
+            </div>
+            <br>
+            
+            <div class="input-field">
+                <input type="text" name="telefone" id="telefone"
+                    placeholder="Digite seu Telefone">
+                <div class="underline"></div>
+            </div>
+            <br>
+
+            <div class="input-field">
+                <input type="text" name="nomebolo" id="nomebolo"
+                    placeholder="Digite o Nome do Bolo">
+                <div class="underline"></div>
+            </div>
+            <br>
+
+            <div class="input-field">
+                <input type="date" name="data" id="data">
+                <div class="underline"></div>
+            </div>
+            <br>
+            
+            <div class="input-field">
+                <label for="pg" id="alinhamentopg">Forma Pagamento: </label>
+                        
+                        <select id="pg" name="pg">
+                            <option selected disabled value="">--Selecione--</option>
+                            <option value="credito">Cartão de Credito</option>
+                            <option value="debito">Cartão de Debito</option>
+                            <option value="transferencia">Transferencia Bancaria</option>
+                            <option value="boleto">Boleto Bancario</option>
+                            <option value="Avista">Dinheiro</option>                            
+                        </select>
+            </div>
+            <br>
+
+            <input type="submit" value="Enviar">
+
+        </form>
+
+        
+    </main>
+    
    
-        <form class="formulario" >
+        <!--<form class="formulario" >
             <table>
                 <tr>
                 <td id="titulo"> Preencha com seus dados: <br></td>
@@ -106,7 +185,7 @@
                 </tr>
        
             </table>
-        </form>
+        </form>-->
 
     
 
@@ -116,8 +195,6 @@
 
 
     <!--Rodapé-->
-    <footer>
-        <p>@2020 - Top Bolos®</p>
-    </footer>
+    
 </body>
 </html>
