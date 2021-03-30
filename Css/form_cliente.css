@@ -3,6 +3,7 @@ header{
     border-bottom: 1px solid black;
 }
 
+
 footer{
     margin-top: 400px;
 }
@@ -35,3 +36,13 @@ footer{
     font-size: 25px;
     
 }
+
+header div.logo{
+    width: 100%;
+} 
+
+header div.logo a{
+    margin-left: auto;
+    margin-right: auto;
+}
+
