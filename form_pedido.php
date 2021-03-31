@@ -1,18 +1,19 @@
 <?php
-if(isset($_GET['erro_pedido'])){
-    $campo_erro = $_GET['erro_pedido'];
-    $erro = "ERRO:Algum campo está em branco!";
+session_start();
+if(isset($_SESSION['erro_pedido'])){
+    if($_SESSION['erro_pedido']){
+        $erro = "ERRO:Algum campo esta invalido!";   
+    } 
+    else {
+        $erro = "Pedido feito com sucesso!";
+    }
+    unset($_SESSION['erro_pedido']);
 }
-else{
+else {
     $erro = "";
 }
-
-// if(isset($_GET['redirect'])){
-//     $redireciona = $_GET['redirect'];
-// }else{
-//     $redireciona = '/redtulip/index.php';
-// }
-
+session_write_close();
+// session_destroy();
 ?>
 
 <!DOCTYPE html>
