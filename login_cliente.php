@@ -1,3 +1,20 @@
+<?php
+
+session_start();
+if(isset($_SESSION['login_cliente'])){
+    if($_SESSION['login_cliente']){
+        $erro = "";   
+    } 
+    else {
+        $erro = "ERRO:Senha ou usuario inválidos!";
+    }
+    unset($_SESSION['login_cliente']);
+}
+else {
+    $erro = "";
+}
+session_write_close();  
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,7 +32,8 @@
 <body>
     <main class="container">
         <h2>Login</h2>
-        <form action="" method="">
+        <h3><?=$erro?></h3><br>
+        <form action="php/busca_cliente.php" method="post">
             <div class="input-field">
                 <input type="text" name="username" id="username"
                     placeholder="Digite seu Usuario">

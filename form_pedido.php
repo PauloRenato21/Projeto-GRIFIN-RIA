@@ -1,5 +1,15 @@
 <?php
 session_start();
+
+
+
+	    if(!isset($_SESSION['login_cliente'])){
+		    $_SESSION['login_cliente'] = false;
+            header('Location: form_cliente.html');
+
+	    }
+
+
 if(isset($_SESSION['erro_pedido'])){
     if($_SESSION['erro_pedido']){
         $erro = "ERRO:Algum campo esta invalido!";   

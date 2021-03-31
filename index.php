@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+	if(!isset($_SESSION['login_cliente'])){
+		$_SESSION['login_cliente'] = false;
+	}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -50,7 +57,22 @@
             </div>
             <div class="login">
                 <img src="Imagens/icone-Top_Bolos.png" alt="Top Bolos Cesta" title="Comprar"/>
-                <button><a href="login.html">Login</a></button>
+                <?php 
+                    if($_SESSION['login_cliente']):
+                        
+                    
+                ?>
+                <button><a href="php/logout_cliente.php">Sair</a></button>
+                <?php
+                    else:
+
+                ?>
+
+                <button><a href="login_cliente.php">Login</a></button>
+                <?php
+
+                    endif;
+                ?>
             </div>  
         </header>
 
