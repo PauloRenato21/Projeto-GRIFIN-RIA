@@ -1,3 +1,10 @@
+<?php
+    include_once "php/conexao.php";
+
+    $sql = "select * from cliente c inner join pedido p on c.ID = p.FK_CLIENTE_ID";
+    $res = $con->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,7 +24,7 @@
     <!--Logo-->
     <header>
         <div class="logo">
-            <a href="index.html"><img src="Imagens/Top_Bolos.png" alt="Top Bolos" title="Top Bolos"/></a>
+            <a href="index.php"><img src="Imagens/Top_Bolos.png" alt="Top Bolos" title="Top Bolos"/></a>
         </div>
     </header>
 
@@ -26,18 +33,22 @@
         <h1>Pedidos </h1>
 
         <div class="pedidos">
-
-            <div>
-                <h3>&gt; Nome &lt;</h3>
-                <p>Telefone:</p>
-                <p>E-mail:</p>
-                <p>Endereço:</p>
-                <p>CPF:</p>
-                <p>Bolo:</p>
-                <p>Forma de Pagamento:</p>
-                <p>Data do Pedido:</p>
+                <?php
+                    foreach($res as $count):
+                ?>
+            <div>   
+                <h3>&gt; <?=$count['nome']?> &lt;</h3>
+                <p>Telefone: <?=$count['telefone']?></p>
+                <p>Email: <?=$count['email']?></p>
+                <p>Endereço: <?=$count['endereco']?></p>
+                <p>CPF: <?=$count['cpf']?></p>
+                <p>Nome do Bolo: <?=$count['NOME_BOLO']?></p>
+                <p>Forma de Pagemento: <?=$count['FORMA_PAGAMENTO']?></p>
+                <p>Data do Pedido: <?=$count['DATA_PEDIDO']?></p>
             </div>
-
+                <?php
+                    endforeach;
+                ?>
         </div>
 
     </div>

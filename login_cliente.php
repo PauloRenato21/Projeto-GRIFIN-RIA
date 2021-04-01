@@ -1,13 +1,13 @@
 <?php
     session_start();
-    if(isset($_SESSION['login_cliente'])){
-        if($_SESSION['login_cliente']){
+    if(isset($_SESSION['erro_login_cliente'])){
+        if(!$_SESSION['erro_login_cliente']){
             $erro = "";   
         } 
         else {
             $erro = "ERRO:Senha ou usuario inválidos!";
         }
-        unset($_SESSION['login_cliente']);
+        unset($_SESSION['erro_login_cliente']);
     }
     else {
         $erro = "";

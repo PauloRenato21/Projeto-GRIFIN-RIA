@@ -63,7 +63,7 @@
                     <option value="debito">Cartão de Debito</option>
                     <option value="transferencia">Transferencia Bancaria</option>
                     <option value="boleto">Boleto Bancario</option>
-                    <option value="Avista">Dinheiro</option>                                               
+                    <option value="dinheiro">Dinheiro</option>                                               
                 </select>
             </div>
             <br>
