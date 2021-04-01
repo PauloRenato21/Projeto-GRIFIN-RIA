@@ -4,6 +4,8 @@ session_start();
 	if(!isset($_SESSION['login_cliente'])){
 		$_SESSION['login_cliente'] = false;
 	}
+
+session_write_close();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -19,7 +21,7 @@ session_start();
             '<span></span>' +
             '<span></span>' +
             '<span></span>' +
-            '<a href="form_cliente.html" class="bio_btn">Participar da Promoção &nbsp;</a>' +
+            '<a href="form_cliente.php" class="bio_btn">Participar da Promoção &nbsp;</a>' +
             '</div>',
             css: '#bio_ep {width: 400px; height: 400px; color: #333; background-color: #fcb3be; text-align: center;background-image: url(Imagens/oport.png);background-size: cover;}' +
             '#bio_ep_content {padding: 255px 0 0 0; font-family: inherit;}' +
@@ -30,7 +32,7 @@ session_start();
             'a.bio_btn:hover{text-decoration:none;color:rgb(250, 88, 115);}',
             cookieExp: 0,
             showOnDelay: true,
-            delay: 5
+            delay: 50
     
         });
         </script>
@@ -53,14 +55,12 @@ session_start();
         <!--Logo-->
         <header>
             <div class="logo">
-                <a href="index.html"><img src="Imagens/Top_Bolos.png" alt="Top Bolos" title="Top Bolos"/></a>
+                <a href="index.php"><img src="Imagens/Top_Bolos.png" alt="Top Bolos" title="Top Bolos"/></a>
             </div>
             <div class="login">
                 <img src="Imagens/icone-Top_Bolos.png" alt="Top Bolos Cesta" title="Comprar"/>
                 <?php 
                     if($_SESSION['login_cliente']):
-                        
-                    
                 ?>
                 <button><a href="php/logout_cliente.php">Sair</a></button>
                 <?php

@@ -1,19 +1,18 @@
 <?php
-
-session_start();
-if(isset($_SESSION['login_cliente'])){
-    if($_SESSION['login_cliente']){
-        $erro = "";   
-    } 
-    else {
-        $erro = "ERRO:Senha ou usuario inválidos!";
+    session_start();
+    if(isset($_SESSION['login_cliente'])){
+        if($_SESSION['login_cliente']){
+            $erro = "";   
+        } 
+        else {
+            $erro = "ERRO:Senha ou usuario inválidos!";
+        }
+        unset($_SESSION['login_cliente']);
     }
-    unset($_SESSION['login_cliente']);
-}
-else {
-    $erro = "";
-}
-session_write_close();  
+    else {
+        $erro = "";
+    }
+    session_write_close();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

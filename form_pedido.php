@@ -1,29 +1,25 @@
 <?php
-session_start();
+    session_start();
 
-
-
-	    if(!isset($_SESSION['login_cliente'])){
-		    $_SESSION['login_cliente'] = false;
-            header('Location: form_cliente.html');
-
-	    }
-
-
-if(isset($_SESSION['erro_pedido'])){
-    if($_SESSION['erro_pedido']){
-        $erro = "ERRO:Algum campo esta invalido!";   
-    } 
-    else {
-        $erro = "Pedido feito com sucesso!";
+    if(isset($_SESSION['login_cliente'])){
+        if($_SESSION['login_cliente'] == false){
+            header('Location: form_cliente.php');
+        }
     }
-    unset($_SESSION['erro_pedido']);
-}
-else {
-    $erro = "";
-}
-session_write_close();
-// session_destroy();
+
+    if(isset($_SESSION['erro_pedido'])){
+        if($_SESSION['erro_pedido']){
+            $erro = "ERRO:Algum campo esta invalido!";   
+        } 
+        else {
+            $erro = "Pedido feito com sucesso!";
+        }
+        unset($_SESSION['erro_pedido']);
+    }
+    else {
+        $erro = "";
+    }
+    session_write_close();
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +37,8 @@ session_write_close();
     <main class="container">
 
         <h2>Pedido:</h2>
-        <h3><?=$erro?></h3><br>
+        <h3><?=$erro?></h3>
+        <br>
         <form action="php/enviapedido.php" method="POST">
 
             <div class="input-field">
