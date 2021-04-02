@@ -30,24 +30,32 @@
 
     <div id="main">
 
-        <h1>Pedidos </h1>
+        <h1>Pedidos</h1>
 
         <div class="pedidos">
                 <?php
-                    foreach($res as $count):
+                    if($res->rowCount()):
+                        foreach($res as $count):
                 ?>
-            <div>   
-                <h3>&gt; <?=$count['nome']?> &lt;</h3>
-                <p>Telefone: <?=$count['telefone']?></p>
-                <p>Email: <?=$count['email']?></p>
-                <p>Endereço: <?=$count['endereco']?></p>
-                <p>CPF: <?=$count['cpf']?></p>
-                <p>Nome do Bolo: <?=$count['NOME_BOLO']?></p>
-                <p>Forma de Pagemento: <?=$count['FORMA_PAGAMENTO']?></p>
-                <p>Data do Pedido: <?=$count['DATA_PEDIDO']?></p>
-            </div>
+                    <div>   
+                        <h3><?=$count['nome']?></h3>
+                        <p>Telefone: <?=$count['telefone']?></p>
+                        <p>Email: <?=$count['email']?></p>
+                        <p>Endereço: <?=$count['endereco']?></p>
+                        <p>CPF: <?=$count['cpf']?></p>
+                        <p>Nome do Bolo: <?=$count['NOME_BOLO']?></p>
+                        <p>Forma de Pagemento: <?=$count['FORMA_PAGAMENTO']?></p>
+                        <p>Data do Pedido: <?= date('d/m/Y',strtotime($count['DATA_PEDIDO'])) ?></p>
+                    </div>
                 <?php
-                    endforeach;
+                        endforeach;
+                    else:
+                ?>
+                    <div id="vazio">
+                        <p>Nenhum pedido realizado !!!</p>
+                    </div>
+                <?php
+                    endif;
                 ?>
         </div>
 

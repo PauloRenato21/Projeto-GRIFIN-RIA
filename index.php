@@ -32,7 +32,7 @@ session_write_close();
             'a.bio_btn:hover{text-decoration:none;color:rgb(250, 88, 115);}',
             cookieExp: 0,
             showOnDelay: true,
-            delay: 50
+            delay: 5
     
         });
         </script>
@@ -68,7 +68,7 @@ session_write_close();
 
                 ?>
 
-                <button><a href="login_cliente.php">Login</a></button>
+                <a href="login_cliente.php"><button>Login</button></a>
                 <?php
 
                     endif;
@@ -83,7 +83,7 @@ session_write_close();
             <table>
                 <tr>
                     <td>
-                        <a href="index.html">Home</a>
+                        <a href="index.php">Home</a>
                     </td>
                     <td>
                         <a href="#bolos">Bolos</a>
@@ -256,7 +256,7 @@ session_write_close();
                 </div>
                 <img src="Imagens/Promocoes_Bolos/Bolo-Cobertuta.png" alt="Bolos Top Bolos" title="Bolo Cobertura Morango"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>
+                <a href="form_pedido.php"><button>Comprar</button></a>  
             </div>
             <!--Bolo Surpresa Kit Kat-->
             <div class="quadro2">
@@ -265,7 +265,7 @@ session_write_close();
                 </div>
                 <img src="Imagens/Promocoes_Bolos/Bolo-Surpresa.png" alt="Bolos Top Bolos" title="Bolo Surpresa"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>                
+                <a href="form_pedido.php"><button>Comprar</button></a>             
             </div>
             <!--Bolo de Aniversário-->
             <div class="quadro3">
@@ -274,7 +274,7 @@ session_write_close();
                 </div>     
                 <img src="Imagens/Promocoes_Bolos/Bolo-Aniver.png" alt="Bolos Top Bolos" title="Bolo Aniversário"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>                                
+                <a href="form_pedido.php"><button>Comprar</button></a>                                  
             </div>
             <!--Bolo Kit Kat de Brigadeiro-->
             <div class="quadro4">
@@ -283,7 +283,7 @@ session_write_close();
                 </div>    
                 <img src="Imagens/Promocoes_Bolos/Bolo-KitKat.png" alt="Bolos Top Bolos" title="Bolo Kit Kat Brigadeiro"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>                 
+                <a href="form_pedido.php"><button>Comprar</button></a>                 
             </div>
 
         </section> 
@@ -304,7 +304,7 @@ session_write_close();
                 </div>       
                 <img src="Imagens/Promocoes_Tortas/Torta-Choco.png" alt="Tortas Top Bolos" title="Torta Chocolate"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>             
+                <a href="form_pedido.php"><button>Comprar</button></a>             
             </div>
             <!--Torta de Cereja-->
             <div class="quadro2">
@@ -313,7 +313,7 @@ session_write_close();
                 </div>
                 <img src="Imagens/Promocoes_Tortas/Torta-Cereja.png" alt="Tortas Top Bolos" title="Torta Cereja"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>    
+                <a href="form_pedido.php"><button>Comprar</button></a>    
             </div>
             <!--Torta de Amêndoa-->
             <div class="quadro3">
@@ -322,7 +322,7 @@ session_write_close();
                 </div>
                 <img src="Imagens/Promocoes_Tortas/Torta-Amendoa.png" alt="Tortas Top Bolos" title="Torta Amêndoa"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>  
+                <a href="form_pedido.php"><button>Comprar</button></a>  
             </div>
             <!--Torta com Glacê-->
             <div class="quadro4">
@@ -331,7 +331,7 @@ session_write_close();
                 </div>
                 <img src="Imagens/Promocoes_Tortas/Torta-Glace.png" alt="Tortas Top Bolos" title="Torta Glacê"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>   
+                <a href="form_pedido.php"><button>Comprar</button></a>
             </div>
 
         </section>
@@ -352,7 +352,7 @@ session_write_close();
                 </div>
                 <img src="Imagens/Promocoes_Doces/Donuts.png" alt="Donuts Top Bolos" title="Donuts Morango"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>   
+                <a href="form_pedido.php"><button>Comprar</button></a>   
             </div>
 
             </div>
@@ -363,7 +363,7 @@ session_write_close();
                 </div>
                 <img src="Imagens/Promocoes_Doces/Muffins.png" alt="Muffins Top Bolos" title="Muffins pedaços Chocolate"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>                   
+                <a href="form_pedido.php"><button>Comprar</button></a>                     
             </div>
 
             </div>
@@ -374,7 +374,7 @@ session_write_close();
                 </div>   
                 <img src="Imagens/Promocoes_Doces/Pudim.png" alt="Pudim Top Bolos" title="Pudim"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>  
+                <a href="form_pedido.php"><button>Comprar</button></a>    
             </div>
             </div>
             <!--Hambúrguer de Siri Colorido-->
@@ -384,7 +384,7 @@ session_write_close();
                 </div>  
                 <img src="Imagens/Promocoes_Doces/Burguer-Siri.png " alt="Hambúrguer de Siri Top Bolos" title="Hambúrguer de Siri"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>                                
+                <a href="form_pedido.php"><button>Comprar</button></a>                                  
             </div>
             </div>
         </section>
