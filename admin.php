@@ -3,7 +3,7 @@
 session_start();
 if(isset($_SESSION['erro_admin'])){
     if($_SESSION['erro_admin']){
-        $erro = "ERRO:Senha ou usuario invalidos!";   
+        $erro = "ERRO:Senha ou usuário inválidos!";   
     } 
     else {
         $erro = "";
