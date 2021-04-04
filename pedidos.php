@@ -1,5 +1,12 @@
 <?php
     include_once "php/conexao.php";
+    
+    session_start();
+
+    if(!isset($_SESSION['erro_admin'])){
+        $_SESSION['erro_admin'] = true;
+        header('location: admin.php');
+    }
 
     $sql = "select * from cliente c inner join pedido p on c.ID = p.FK_CLIENTE_ID";
     $res = $con->query($sql);
