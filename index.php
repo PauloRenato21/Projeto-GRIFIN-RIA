@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+	if(!isset($_SESSION['login_cliente'])){
+		$_SESSION['login_cliente'] = false;
+	}
+
+session_write_close();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -12,7 +21,7 @@
             '<span></span>' +
             '<span></span>' +
             '<span></span>' +
-            '<a href="form_cliente.html" class="bio_btn">Participar da Promoção &nbsp;</a>' +
+            '<a href="form_cliente.php" class="bio_btn">Participar da Promoção &nbsp;</a>' +
             '</div>',
             css: '#bio_ep {width: 400px; height: 400px; color: #333; background-color: #fcb3be; text-align: center;background-image: url(Imagens/oport.png);background-size: cover;}' +
             '#bio_ep_content {padding: 255px 0 0 0; font-family: inherit;}' +
@@ -46,11 +55,24 @@
         <!--Logo-->
         <header>
             <div class="logo">
-                <a href="index.html"><img src="Imagens/Top_Bolos.png" alt="Top Bolos" title="Top Bolos"/></a>
+                <a href="index.php"><img src="Imagens/Top_Bolos.png" alt="Top Bolos" title="Top Bolos"/></a>
             </div>
             <div class="login">
                 <img src="Imagens/icone-Top_Bolos.png" alt="Top Bolos Cesta" title="Comprar"/>
-                <button><a href="form_cliente.html">Login</a></button>
+                <?php 
+                    if($_SESSION['login_cliente']):
+                ?>
+                <button><a href="php/logout_cliente.php">Sair</a></button>
+                <?php
+                    else:
+
+                ?>
+
+                <a href="login_cliente.php"><button>Login</button></a>
+                <?php
+
+                    endif;
+                ?>
             </div>  
         </header>
 
@@ -61,7 +83,7 @@
             <table>
                 <tr>
                     <td>
-                        <a href="index.html">Home</a>
+                        <a href="index.php">Home</a>
                     </td>
                     <td>
                         <a href="#bolos">Bolos</a>
@@ -100,7 +122,7 @@
                                     <div class="modal-body">
                                         <img src="Imagens/Carrosel/bolo-oreo.png" alt="Top Bolos" title="Bolo Oreo Top Bolos"/>
                                         <p class="preco-modal">R$: 20,00</p>
-                                        <button><a href="form_pedido.html">Comprar</a></button>
+                                        <button><a href="form_pedido.php">Comprar</a></button>
                                     </div>
 
                                 </div>
@@ -125,7 +147,7 @@
                                     <div class="modal-body">
                                         <img src="Imagens/Carrosel/cupcake.png" alt="Top Bolos" title="Cupcake Top Bolos"/>
                                         <p class="preco-modal">R$: 20,00</p>
-                                        <button><a href="form_pedido.html">Comprar</a></button>
+                                        <button><a href="form_pedido.php">Comprar</a></button>
                                     </div>
 
                                 </div>
@@ -151,7 +173,7 @@
                                     <div class="modal-body">
                                         <img src="Imagens/Carrosel/torta.png" alt="Top Bolos" title="Torta Floresta Negra"/>
                                         <p class="preco-modal">R$: 20,00</p>
-                                        <button><a href="form_pedido.html">Comprar</a></button>
+                                        <button><a href="form_pedido.php">Comprar</a></button>
                                     </div>
 
                                 </div>
@@ -177,7 +199,7 @@
                                     <div class="modal-body">
                                         <img src="Imagens/Carrosel/trufas.png" alt="Top Bolos" title="Trufas Gourmet"/>
                                         <p class="preco-modal">R$: 20,00</p>
-                                        <button><a href="form_pedido.html">Comprar</a></button>
+                                        <button><a href="form_pedido.php">Comprar</a></button>
                                     </div>
 
                                 </div>
@@ -234,7 +256,7 @@
                 </div>
                 <img src="Imagens/Promocoes_Bolos/Bolo-Cobertuta.png" alt="Bolos Top Bolos" title="Bolo Cobertura Morango"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.html">Comprar</a></button>
+                <a href="form_pedido.php"><button>Comprar</button></a>  
             </div>
             <!--Bolo Surpresa Kit Kat-->
             <div class="quadro2">
@@ -243,7 +265,7 @@
                 </div>
                 <img src="Imagens/Promocoes_Bolos/Bolo-Surpresa.png" alt="Bolos Top Bolos" title="Bolo Surpresa"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.html">Comprar</a></button>                
+                <a href="form_pedido.php"><button>Comprar</button></a>             
             </div>
             <!--Bolo de Aniversário-->
             <div class="quadro3">
@@ -252,7 +274,7 @@
                 </div>     
                 <img src="Imagens/Promocoes_Bolos/Bolo-Aniver.png" alt="Bolos Top Bolos" title="Bolo Aniversário"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.html">Comprar</a></button>                                
+                <a href="form_pedido.php"><button>Comprar</button></a>                                  
             </div>
             <!--Bolo Kit Kat de Brigadeiro-->
             <div class="quadro4">
@@ -261,7 +283,7 @@
                 </div>    
                 <img src="Imagens/Promocoes_Bolos/Bolo-KitKat.png" alt="Bolos Top Bolos" title="Bolo Kit Kat Brigadeiro"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.html">Comprar</a></button>                 
+                <a href="form_pedido.php"><button>Comprar</button></a>                 
             </div>
 
         </section> 
@@ -282,7 +304,7 @@
                 </div>       
                 <img src="Imagens/Promocoes_Tortas/Torta-Choco.png" alt="Tortas Top Bolos" title="Torta Chocolate"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.html">Comprar</a></button>             
+                <a href="form_pedido.php"><button>Comprar</button></a>             
             </div>
             <!--Torta de Cereja-->
             <div class="quadro2">
@@ -291,7 +313,7 @@
                 </div>
                 <img src="Imagens/Promocoes_Tortas/Torta-Cereja.png" alt="Tortas Top Bolos" title="Torta Cereja"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.html">Comprar</a></button>    
+                <a href="form_pedido.php"><button>Comprar</button></a>    
             </div>
             <!--Torta de Amêndoa-->
             <div class="quadro3">
@@ -300,7 +322,7 @@
                 </div>
                 <img src="Imagens/Promocoes_Tortas/Torta-Amendoa.png" alt="Tortas Top Bolos" title="Torta Amêndoa"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.html">Comprar</a></button>  
+                <a href="form_pedido.php"><button>Comprar</button></a>  
             </div>
             <!--Torta com Glacê-->
             <div class="quadro4">
@@ -309,7 +331,7 @@
                 </div>
                 <img src="Imagens/Promocoes_Tortas/Torta-Glace.png" alt="Tortas Top Bolos" title="Torta Glacê"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.html">Comprar</a></button>   
+                <a href="form_pedido.php"><button>Comprar</button></a>
             </div>
 
         </section>
@@ -330,7 +352,7 @@
                 </div>
                 <img src="Imagens/Promocoes_Doces/Donuts.png" alt="Donuts Top Bolos" title="Donuts Morango"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.html">Comprar</a></button>   
+                <a href="form_pedido.php"><button>Comprar</button></a>   
             </div>
 
             </div>
@@ -341,7 +363,7 @@
                 </div>
                 <img src="Imagens/Promocoes_Doces/Muffins.png" alt="Muffins Top Bolos" title="Muffins pedaços Chocolate"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.html">Comprar</a></button>                   
+                <a href="form_pedido.php"><button>Comprar</button></a>                     
             </div>
 
             </div>
@@ -352,7 +374,7 @@
                 </div>   
                 <img src="Imagens/Promocoes_Doces/Pudim.png" alt="Pudim Top Bolos" title="Pudim"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.html">Comprar</a></button>  
+                <a href="form_pedido.php"><button>Comprar</button></a>    
             </div>
             </div>
             <!--Hambúrguer de Siri Colorido-->
@@ -362,7 +384,7 @@
                 </div>  
                 <img src="Imagens/Promocoes_Doces/Burguer-Siri.png " alt="Hambúrguer de Siri Top Bolos" title="Hambúrguer de Siri"/>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.html">Comprar</a></button>                                
+                <a href="form_pedido.php"><button>Comprar</button></a>                                  
             </div>
             </div>
         </section>
