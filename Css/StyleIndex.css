@@ -164,6 +164,7 @@ header, section#bolos, section#tortas, section#doces{
 }
 
 /*Divs Promoções*/
+
 section#bolos, section#tortas, section#doces{
     margin-left: 18%;
 }
@@ -175,28 +176,34 @@ section#bolos h3, section#tortas h3, section#doces h3{
     text-align: center;
 }
 
-section div.nome{
-    width: 70%;
-    margin: 5% 0%;
-    margin-left: 15%;
-    border: 2px solid black;
-    background-color: #fccccb;
+section#bolos div.corpo, section#tortas div.corpo, section#doces div.corpo{
+    text-align: center;
+    margin-left: 8%;
+    margin-bottom: 3%;
+    width: 38%;
+    float: left;
 }
 
-section div.nome p{
+section#bolos div.nome, section#tortas div.nome, section#doces div.nome{
+    border: 2px solid black;
     text-align: center;
     font-family: 'Domine', serif;
     font-size: 110%;
-    margin: 5% 0%;
+    background-color: #fccccb;
+    padding: 3%;
+    width: 75%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
-p.preco{
+section#bolos div.corpo p, section#tortas div.corpo p, section#doces div.corpo p{
     font-family: 'Domine', serif;
     font-size: 20px;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
-section#bolos button, section#tortas button, section#doces button{
+section#bolos div.corpo button, section#tortas div.corpo button, section#doces div.corpo button{
     width: 70%;
     border: 2px solid black;
     border-radius: 10px;
@@ -206,35 +213,22 @@ section#bolos button, section#tortas button, section#doces button{
     font-size: 120%;
     margin-top: 1%;
     margin-bottom: 12%;
-
 }
 
-section#bolos button a, section#tortas button a, section#doces button a{
-    color: black;
+section#bolos div.corpo button:hover, section#tortas div.corpo button:hover, section#doces div.corpo button:hover{
+    background-color: #fccccb;
 }
 
-section#bolos button:hover, section#tortas button:hover, section#doces button:hover{
-   background-color: #fccccb;
+div.container-image{
+    width: 250px;
+    height: 180px;
+    margin: auto;
+    overflow: hidden;
 }
 
-section#bolos button a:hover, section#tortas button a:hover, section#doces button a:hover{
-    text-decoration: none;
- }
-
-section#bolos div.quadro1, section#bolos div.quadro3, section#tortas div.quadro1, section#tortas div.quadro3, section#doces div.quadro1, section#doces div.quadro3{
-    float: left;
-    margin-left: 7%;
-    text-align: center;
-    width: 38%;
-    margin-bottom: 3%;
-}
-
-section#bolos div.quadro2, section#bolos div.quadro4, section#tortas div.quadro2, section#tortas div.quadro4, section#doces div.quadro2, section#doces div.quadro4{
-    float: left;
-    margin-left: 10%;
-    width: 38%; 
-    text-align: center;
-    margin-bottom: 3%;
+div.container-image img{
+    width: 100%;
+    height: auto;
 }
 
 /*Rodapé*/
