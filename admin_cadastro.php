@@ -14,26 +14,29 @@
 </head>
 <body>
     <main class="container">
-    <form action="php/login.php" method="POST">
-        <h2>Cadastro Produto</h2>
+    <form action="" method="POST">
 
-            <div class="input-field">
-                <input type="text" name="preco" id="preco"
-                    placeholder="Digite o Preço">
-                <div class="underline"></div>
-            </div>
-            <br>
+        <h2>Cadastro Produto</h2>
             <div class="input-field">
                 <input type="text" name="bolo" id="bolo"
                     placeholder="Nome do Bolo">
                 <div class="underline"></div>
             </div>
             <br>
-            <form action="file.php" method="post" enctype="multipart/form-data">
-                <p>Selecione sua imagem: </p>
-                <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
-                <input type="submit" value="Enviar" name="submit">
-            </form>
+            <div class="input-field">
+                <input type="text" name="preco" id="preco"
+                    placeholder="Digite o Preço">
+                <div class="underline"></div>
+            </div>
+            <br>            
+            
+            <p>Selecione sua imagem: </p>
+            <br>
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Enviar" name="submit">
+          
+
+
     </form>
     </main>
 </body>
