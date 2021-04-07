@@ -1,9 +1,14 @@
 <?php
+
+include_once "php/conexao.php";
 session_start();
 
 	if(!isset($_SESSION['login_cliente'])){
 		$_SESSION['login_cliente'] = false;
 	}
+
+    $sql = "select * from produto";
+    $bolos = $con->query($sql);
 
 session_write_close();
 ?>
@@ -252,20 +257,27 @@ session_write_close();
             
             <h3>Promoções Bolos </h3>
             <br/>
-            <!--Bolo com Morango-->
+            
+            <?php
+                foreach($bolos as $count):
+            ?>
+            
             <div class="corpo">
                 <div class="nome">
-                    Bolo com Morango
+                    <?=$count['nome']?>
                 </div>
                 <div class="container-image">
-                    <img src="Imagens/Promocoes_Bolos/Bolo-Cobertuta.png" alt="Bolos Top Bolos" title="Bolo Cobertura Morango"/>
+                    <img src="<?=$count['foto']?>"/>
                 </div>
-                <p class="preco">R$: 20,00</p>
+                <p class="preco">R$: <?=$count['preço']?>,00</p>
                 <a href="form_pedido.php"><button>Comprar</button></a>  
             </div>
 
+            <?php
+                endforeach;
+            ?>
             <!--Bolo Surpresa Kit Kat-->
-            <div class="corpo">
+            <!-- <div class="corpo">
                 <div class="nome">
                     Bolo Surpresa Kit Kat
                 </div>
@@ -274,10 +286,10 @@ session_write_close();
                 </div>
                 <p class="preco">R$: 20,00</p>
                 <a href="form_pedido.php"><button>Comprar</button></a>             
-            </div>
+            </div> -->
 
             <!--Bolo de Aniversário-->
-            <div class="corpo">
+            <!-- <div class="corpo">
                 <div class="nome">
                     Bolo de Aniversário
                 </div>
@@ -286,10 +298,10 @@ session_write_close();
                 </div>
                 <p class="preco">R$: 20,00</p>
                 <a href="form_pedido.php"><button>Comprar</button></a>                                  
-            </div>
+            </div> -->
 
             <!--Bolo Kit Kat de Brigadeiro-->
-            <div class="corpo">
+            <!-- <div class="corpo">
                 <div class="nome">
                     Bolo Kit Kat de Brigadeiro
                 </div>
@@ -298,7 +310,7 @@ session_write_close();
                 </div>
                 <p class="preco">R$: 20,00</p>
                 <a href="form_pedido.php"><button>Comprar</button></a>                 
-            </div>
+            </div> -->
 
         </section> 
 

@@ -10,6 +10,8 @@
 
     $sql = "select * from cliente c inner join pedido p on c.ID = p.FK_CLIENTE_ID";
     $res = $con->query($sql);
+
+    session_write_close();
 ?>
 
 <!DOCTYPE html>

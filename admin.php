@@ -22,12 +22,8 @@ session_write_close();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="Css/StyleIndex.css"/>
     <link rel="stylesheet" type="text/css" href="Css/admin.css"/>
     <link rel="shortcut icon" href="Imagens/Top_Bolos.png" type="image/png"/>
-    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap" rel="stylesheet"/>
 
     <title>Top Bolos | Login Fornecedor</title>
 </head>
