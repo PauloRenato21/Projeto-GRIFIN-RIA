@@ -22,7 +22,7 @@
         $telefone = $_POST['telefone'];
         $cpf = $_POST['cpf'];
 
-        $sql = 'insert into cliente (nome, login, senha, cpf, email, endereco, telefone) values("'. $nome .' "," ' . $login . ' "," ' . $senha . ' "," ' .  $cpf . ' "," ' . $email . ' "," ' . $endereco . ' "," ' . $telefone . ' ")';
+        $sql = 'insert into cliente (nome, login, senha, cpf, email, endereco, telefone) values("'.$nome.'","' . $login.'","'.$senha.'","'.$cpf.'","'.$email.'","'.$endereco.'","'.$telefone.'")';
 
         $con->exec($sql);
 
