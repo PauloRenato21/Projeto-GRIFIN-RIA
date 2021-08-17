@@ -1,4 +1,11 @@
-<h1>SA - Situação de Aprendizagem - Parte 04</h1>
+# SA - Situação de Aprendizagem - Parte 04
+
+### Github Contribuidores
+- [Gabriel](https://github.com/Neves84)
+- [Andre](https://github.com/AndreV251)
+- [Alexandre](https://github.com/alexhgame)
+
+<hr>
 
 <h3>Continuação da SA Parte 03</h3>
 
