@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+/*Reset Padrao Browser*/
+*{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+/*Cor Fundo*/
+body{
+    background-color: #f8e6e5;
+}
+
+/*Div Logo*/
+header div.logo{
+    float: left;
+    width: 90%;
+    text-align: center;
+}
+
+header div.logo a{
+    margin-left: 130px;
+}
+
+div.login{
+    float: right;
+    width: 10%;
+    height: 150px;
+}
+
+div.login img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.login button{
+    border: 2px solid black;
+    padding: 1px 15px; 
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-family: 'Domine', serif;
+    font-size: 15px;
+    background-color: #f8e6e5;
+}
+
+div.login button a{
+    color: black;
+    text-decoration: none;
+}
+
+div.login button:hover{
+    outline: none;
+    text-decoration: none;
+    border-color: #F17873;
+    color: rgb(250, 88, 115);
+}
+
+div.login a:hover{
+    text-decoration: none;
+    color: rgb(250, 88, 115);
+}
+
+/*Menu superior*/
+nav table{
+    width: 100%;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+nav table tr td{
+    width: 25%;
+    padding: 1% 0%;
+    text-align: center;
+}
+
+nav table tr td a{
+    text-decoration: none;
+    color: black;
+    font-size: 120%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav table tr td a:hover{
+    color: rgb(250, 88, 115);
+    text-decoration: none;
+}
+
+/*Carrosel*/
+.carousel{
+    text-align: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    height: auto;
+    font-size: 130%;
+    font-family: 'Eczar', serif;
+}
+
+/*Modal Carrosel*/
+div.modal-content{ /*Cor de fundo Modal*/
+    background-color: #f8e6e5;
+}
+
+div.modal-header h3{ /*Cabeçalho do Modal - Titulo*/
+    font-family: 'Domine', serif;
+}
+
+div.modal-body img{ /*Corpo do Modal - Imagem no Modal*/
+    float: left;
+    border-right: 2px ridge;
+}
+
+div.modal-body p.preco-modal{ /*Corpo do Modal - Preço no Modal*/
+    font-family: 'Domine', serif;
+    border-radius: 5px;
+    margin-top: 7%;
+}
+
+div.modal-body button{ /*Corpo do Modal - Botão no Modal*/
+    font-family: 'Domine', serif;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+}
+
+div.modal-body button:hover{
+    border-color: #F17873;
+}
+
+div.modal-body button a{
+    color: black;
+}
+
+div.modal-body button a:hover{ /*Corpo do Modal - Botão no Modal*/
+    font-family: 'Domine', serif;
+    text-decoration: none;
+    color: rgb(250, 88, 115);
+}
+
+/*Menu Lateral*/
+aside#menuLateral{
+    float: left;
+    text-align: center;
+    width: 10%;
+    height: 320px;
+    margin: 5% 1% 0% 4%;
+    position: sticky;
+    top: 100px;
+}
+
+aside#menuLateral p{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 120%;
+}
+
+/*Divs Promoções Tamanho dos Pais*/
+header, section#bolos, section#tortas, section#doces{
+    overflow: hidden;
+}
+
+/*Divs Promoções*/
+
+section#bolos, section#tortas, section#doces{
+    margin-left: 18%;
+}
+
+section#bolos h3, section#tortas h3, section#doces h3{
+    font-size: 190%;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+section#bolos div.corpo, section#tortas div.corpo, section#doces div.corpo{
+    text-align: center;
+    margin-left: 8%;
+    margin-bottom: 3%;
+    width: 38%;
+    float: left;
+}
+
+section#bolos div.nome, section#tortas div.nome, section#doces div.nome{
+    border: 2px solid black;
+    text-align: center;
+    font-family: 'Domine', serif;
+    font-size: 110%;
+    background-color: #fccccb;
+    padding: 3%;
+    width: 75%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+section#bolos div.corpo p, section#tortas div.corpo p, section#doces div.corpo p{
+    font-family: 'Domine', serif;
+    font-size: 20px;
+    margin-top: 2%;
+}
+
+section#bolos div.corpo button, section#tortas div.corpo button, section#doces div.corpo button{
+    width: 70%;
+    border: 2px solid black;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+    font-family: 'Domine', serif;
+    font-size: 120%;
+    margin-top: 1%;
+    margin-bottom: 12%;
+}
+
+section#bolos div.corpo button:hover, section#tortas div.corpo button:hover, section#doces div.corpo button:hover{
+    background-color: #fccccb;
+}
+
+div.container-image{
+    width: 250px;
+    height: 180px;
+    margin: auto;
+    overflow: hidden;
+}
+
+div.container-image img{
+    width: 100%;
+    height: auto;
+}
+
+/*Rodapé*/
+footer{
+    height: auto;
+    border-top: 1px solid;
+}
+
+footer p{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 120%;
+    margin-top: 10px;
+}
