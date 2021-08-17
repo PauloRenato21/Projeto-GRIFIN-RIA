@@ -19,4 +19,4 @@ com todos os bolos disponíveis para o usuário escolher a quantidade a ser comp
 
 <h4>Link da Página</h4>
 
-<a href="[Top Bolos | Home (epizy.com)](http://www.topbolos.epizy.com/)" style="text-decoration:none;color:#fccccb">Top Bolos</a> :link:
+[Top Bolos](http://www.topbolos.epizy.com/) :link:
