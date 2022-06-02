@@ -1,3 +1,21 @@
+<?php
+    session_start();
+
+    if(isset($_SESSION['erro_cadastro'])){
+        if($_SESSION['erro_cadastro']){
+            $erro = "ERRO:Algum campo esta invalido ou em branco!!";   
+        } 
+        else {
+            $erro = "Cadastro feito com sucesso!";
+        }
+        unset($_SESSION['erro_cadastro']);
+    }
+    else {
+        $erro = "";
+    }
+    session_write_close();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,6 +31,8 @@
     <main class="container">
 
         <h2>Cadastro</h2>
+        <h3><?=$erro?></h3>
+        <br>
         <form action="php/login.php" method="POST">
 
             <div class="input-field">

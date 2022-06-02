@@ -1,19 +1,18 @@
 <?php
-
-session_start();
-if(isset($_SESSION['login_cliente'])){
-    if($_SESSION['login_cliente']){
-        $erro = "";   
-    } 
-    else {
-        $erro = "ERRO:Senha ou usuario inválidos!";
+    session_start();
+    if(isset($_SESSION['erro_login_cliente'])){
+        if(!$_SESSION['erro_login_cliente']){
+            $erro = "";   
+        } 
+        else {
+            $erro = "ERRO:Senha ou usuario inválidos!";
+        }
+        unset($_SESSION['erro_login_cliente']);
     }
-    unset($_SESSION['login_cliente']);
-}
-else {
-    $erro = "";
-}
-session_write_close();  
+    else {
+        $erro = "";
+    }
+    session_write_close();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -21,12 +20,8 @@ session_write_close();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="Css/StyleIndex.css"/>
     <link rel="stylesheet" type="text/css" href="Css/login.css"/>
     <link rel="shortcut icon" href="Imagens/Top_Bolos.png" type="image/png"/>
-    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap" rel="stylesheet"/>
     <title>Top Bolos | Login Cliente</title>
 </head>
 <body>

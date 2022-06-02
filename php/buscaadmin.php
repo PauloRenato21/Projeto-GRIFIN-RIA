@@ -8,7 +8,7 @@ $resultado = $con->query($sql);
 
 if ($resultado->rowCount()){
     $_SESSION['erro_admin'] = false;
-    Header('Location: ../pedidos.html');
+    Header('Location: ../pedidos.php');
 }
 else {
     header('Location: ../admin.php');

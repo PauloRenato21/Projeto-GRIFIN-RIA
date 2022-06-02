@@ -1,29 +1,25 @@
 <?php
-session_start();
+    session_start();
 
-
-
-	    if(!isset($_SESSION['login_cliente'])){
-		    $_SESSION['login_cliente'] = false;
-            header('Location: form_cliente.html');
-
-	    }
-
-
-if(isset($_SESSION['erro_pedido'])){
-    if($_SESSION['erro_pedido']){
-        $erro = "ERRO:Algum campo esta invalido!";   
-    } 
-    else {
-        $erro = "Pedido feito com sucesso!";
+    if(isset($_SESSION['login_cliente'])){
+        if($_SESSION['login_cliente'] == false){
+            header('Location: form_cliente.php');
+        }
     }
-    unset($_SESSION['erro_pedido']);
-}
-else {
-    $erro = "";
-}
-session_write_close();
-// session_destroy();
+
+    if(isset($_SESSION['erro_pedido'])){
+        if($_SESSION['erro_pedido']){
+            $erro = "ERRO:Algum campo esta invalido!";   
+        } 
+        else {
+            $erro = "Pedido feito com sucesso!";
+        }
+        unset($_SESSION['erro_pedido']);
+    }
+    else {
+        $erro = "";
+    }
+    session_write_close();
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +28,6 @@ session_write_close();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="Css/admin.css"/>
     <title>Formulario Pedido</title>
 </head>
@@ -41,7 +36,8 @@ session_write_close();
     <main class="container">
 
         <h2>Pedido:</h2>
-        <h3><?=$erro?></h3><br>
+        <h3><?=$erro?></h3>
+        <br>
         <form action="php/enviapedido.php" method="POST">
 
             <div class="input-field">
@@ -66,7 +62,7 @@ session_write_close();
                     <option value="debito">Cartão de Debito</option>
                     <option value="transferencia">Transferencia Bancaria</option>
                     <option value="boleto">Boleto Bancario</option>
-                    <option value="Avista">Dinheiro</option>                                               
+                    <option value="dinheiro">Dinheiro</option>                                               
                 </select>
             </div>
             <br>

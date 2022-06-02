@@ -1,9 +1,16 @@
 <?php
+
+include_once "php/conexao.php";
 session_start();
 
 	if(!isset($_SESSION['login_cliente'])){
 		$_SESSION['login_cliente'] = false;
 	}
+
+    $sql = "select * from produto";
+    $bolos = $con->query($sql);
+
+session_write_close();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -19,7 +26,7 @@ session_start();
             '<span></span>' +
             '<span></span>' +
             '<span></span>' +
-            '<a href="form_cliente.html" class="bio_btn">Participar da Promoção &nbsp;</a>' +
+            '<a href="form_cliente.php" class="bio_btn">Participar da Promoção &nbsp;</a>' +
             '</div>',
             css: '#bio_ep {width: 400px; height: 400px; color: #333; background-color: #fcb3be; text-align: center;background-image: url(Imagens/oport.png);background-size: cover;}' +
             '#bio_ep_content {padding: 255px 0 0 0; font-family: inherit;}' +
@@ -38,11 +45,11 @@ session_start();
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="bootstrap-4.5.3-dist/css/bootstrap.css"/>
-        <link rel="stylesheet" type="text/css" href="Css/StyleIndex.css"/>
         <link rel="shortcut icon" href="Imagens/Top_Bolos.png" type="image/png"/>
         <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600&display=swap" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="Css/index.css"/>
 
         <title>Top Bolos | Home</title>
     </head>
@@ -53,14 +60,12 @@ session_start();
         <!--Logo-->
         <header>
             <div class="logo">
-                <a href="index.html"><img src="Imagens/Top_Bolos.png" alt="Top Bolos" title="Top Bolos"/></a>
+                <a href="index.php"><img src="Imagens/Top_Bolos.png" alt="Top Bolos" title="Top Bolos"/></a>
             </div>
             <div class="login">
                 <img src="Imagens/icone-Top_Bolos.png" alt="Top Bolos Cesta" title="Comprar"/>
                 <?php 
                     if($_SESSION['login_cliente']):
-                        
-                    
                 ?>
                 <button><a href="php/logout_cliente.php">Sair</a></button>
                 <?php
@@ -68,7 +73,7 @@ session_start();
 
                 ?>
 
-                <button><a href="login_cliente.php">Login</a></button>
+                <a href="login_cliente.php"><button>Login</button></a>
                 <?php
 
                     endif;
@@ -83,7 +88,7 @@ session_start();
             <table>
                 <tr>
                     <td>
-                        <a href="index.html">Home</a>
+                        <a href="index.php">Home</a>
                     </td>
                     <td>
                         <a href="#bolos">Bolos</a>
@@ -107,7 +112,10 @@ session_start();
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <h2>Bolo Oreo</h2>
-                        <img src="Imagens/Carrosel/bolo-oreo.png" alt="Top Bolos" title="Bolo Oreo Top Bolos" data-toggle="modal" data-target="#primeiroModal"/>
+                        <div>
+                            <img src="Imagens/Carrosel/bolo-oreo.png" alt="Top Bolos" title="Bolo Oreo Top Bolos" data-toggle="modal" data-target="#primeiroModal"/>
+                        </div>
+                        
 
                         <!-- Primeiro Modal Carrosel-->
                         <div class="modal fade" id="primeiroModal" role="dialog">
@@ -249,42 +257,60 @@ session_start();
             
             <h3>Promoções Bolos </h3>
             <br/>
-            <!--Bolo com Morango-->
-            <div class="quadro1">
+            
+            <?php
+                foreach($bolos as $count):
+            ?>
+            
+            <div class="corpo">
                 <div class="nome">
-                    <p>Bolo com Morango</p>
+                    <?=$count['nome']?>
                 </div>
-                <img src="Imagens/Promocoes_Bolos/Bolo-Cobertuta.png" alt="Bolos Top Bolos" title="Bolo Cobertura Morango"/>
-                <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>
+                <div class="container-image">
+                    <img src="<?=$count['foto']?>"/>
+                </div>
+                <p class="preco">R$: <?=$count['preço']?>,00</p>
+                <a href="form_pedido.php"><button>Comprar</button></a>  
             </div>
+
+            <?php
+                endforeach;
+            ?>
             <!--Bolo Surpresa Kit Kat-->
-            <div class="quadro2">
+            <!-- <div class="corpo">
                 <div class="nome">
-                    <p>Bolo Surpresa Kit Kat</p>
+                    Bolo Surpresa Kit Kat
                 </div>
-                <img src="Imagens/Promocoes_Bolos/Bolo-Surpresa.png" alt="Bolos Top Bolos" title="Bolo Surpresa"/>
+                <div class="container-image">
+                    <img src="Imagens/Promocoes_Bolos/Bolo-Surpresa.png" alt="Bolos Top Bolos" title="Bolo Surpresa"/>
+                </div>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>                
-            </div>
+                <a href="form_pedido.php"><button>Comprar</button></a>             
+            </div> -->
+
             <!--Bolo de Aniversário-->
-            <div class="quadro3">
+            <!-- <div class="corpo">
                 <div class="nome">
-                    <p>Bolo de Aniversário</p>
-                </div>     
-                <img src="Imagens/Promocoes_Bolos/Bolo-Aniver.png" alt="Bolos Top Bolos" title="Bolo Aniversário"/>
+                    Bolo de Aniversário
+                </div>
+                <div class="container-image">
+                    <img src="Imagens/Promocoes_Bolos/Bolo-Aniver.png" alt="Bolos Top Bolos" title="Bolo Aniversário"/>
+                </div>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>                                
-            </div>
+                <a href="form_pedido.php"><button>Comprar</button></a>                                  
+            </div> -->
+
             <!--Bolo Kit Kat de Brigadeiro-->
-            <div class="quadro4">
+            <!-- <div class="corpo">
                 <div class="nome">
-                    <p>Bolo Kit Kat de Brigadeiro</p>
-                </div>    
-                <img src="Imagens/Promocoes_Bolos/Bolo-KitKat.png" alt="Bolos Top Bolos" title="Bolo Kit Kat Brigadeiro"/>
+                    Bolo Kit Kat de Brigadeiro
+                </div>
+                <div class="container-image">
+                    <img src="Imagens/Promocoes_Bolos/Bolo-KitKat.png" alt="Bolos Top Bolos" title="Bolo Kit Kat Brigadeiro"/>
+                </div>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>                 
-            </div>
+                <a href="form_pedido.php"><button>Comprar</button></a>                 
+            </div> -->
 
         </section> 
 
@@ -298,40 +324,51 @@ session_start();
             <h3>Promoções Tortas</h3>
             <br/>
             <!--Torta de Chocolate-->
-            <div class="quadro1">
+            <div class="corpo">
                 <div class="nome">
-                    <p>Torta de Chocolate</p>
-                </div>       
-                <img src="Imagens/Promocoes_Tortas/Torta-Choco.png" alt="Tortas Top Bolos" title="Torta Chocolate"/>
+                    Torta de Chocolate
+                </div>
+                <div class="container-image">
+                    <img src="Imagens/Promocoes_Tortas/Torta-Choco.png" alt="Tortas Top Bolos" title="Torta Chocolate"/>
+                </div>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>             
+                <a href="form_pedido.php"><button>Comprar</button></a>             
             </div>
+
             <!--Torta de Cereja-->
-            <div class="quadro2">
+            <div class="corpo">
                 <div class="nome">
-                    <p>Torta de Cereja</p>
+                    Torta de Cereja
                 </div>
-                <img src="Imagens/Promocoes_Tortas/Torta-Cereja.png" alt="Tortas Top Bolos" title="Torta Cereja"/>
+                <div class="container-image">
+                    <img src="Imagens/Promocoes_Tortas/Torta-Cereja.png" alt="Tortas Top Bolos" title="Torta Cereja"/>
+                </div>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>    
+                <a href="form_pedido.php"><button>Comprar</button></a>    
             </div>
+
             <!--Torta de Amêndoa-->
-            <div class="quadro3">
+            <div class="corpo">
                 <div class="nome">
-                    <p>Torta de Amêndoa</p>
+                    Torta de Amêndoa
                 </div>
-                <img src="Imagens/Promocoes_Tortas/Torta-Amendoa.png" alt="Tortas Top Bolos" title="Torta Amêndoa"/>
+                <div class="container-image">
+                    <img src="Imagens/Promocoes_Tortas/Torta-Amendoa.png" alt="Tortas Top Bolos" title="Torta Amêndoa"/>
+                </div>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>  
+                <a href="form_pedido.php"><button>Comprar</button></a>  
             </div>
+
             <!--Torta com Glacê-->
-            <div class="quadro4">
+            <div class="corpo">
                 <div class="nome">
-                    <p>Torta com Glacê</p>
+                    Torta com Glacê
                 </div>
-                <img src="Imagens/Promocoes_Tortas/Torta-Glace.png" alt="Tortas Top Bolos" title="Torta Glacê"/>
+                <div class="container-image">
+                    <img src="Imagens/Promocoes_Tortas/Torta-Glace.png" alt="Tortas Top Bolos" title="Torta Glacê"/>
+                </div>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>   
+                <a href="form_pedido.php"><button>Comprar</button></a>
             </div>
 
         </section>
@@ -346,50 +383,54 @@ session_start();
             <h3>Promoções Doces</h3>
             <br/>
             <!--Donuts com cobertura Morango-->
-            <div class="quadro1">
+            <div class="corpo">
                 <div class="nome">
-                    <p>Donuts com cobertura Morango</p>
+                    Donuts com cobertura Morango
                 </div>
-                <img src="Imagens/Promocoes_Doces/Donuts.png" alt="Donuts Top Bolos" title="Donuts Morango"/>
+                <div class="container-image">
+                    <img src="Imagens/Promocoes_Doces/Donuts.png" alt="Donuts Top Bolos" title="Donuts Morango"/>
+                </div>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>   
+                <a href="form_pedido.php"><button>Comprar</button></a>   
             </div>
 
-            </div>
             <!--Muffins pedaços Chocolate-->
-            <div class="quadro2">
+            <div class="corpo">
                 <div class="nome">
-                    <p>Muffins pedaços Chocolate</p>
+                    Muffins pedaços Chocolate
                 </div>
-                <img src="Imagens/Promocoes_Doces/Muffins.png" alt="Muffins Top Bolos" title="Muffins pedaços Chocolate"/>
+                <div class="container-image">
+                    <img src="Imagens/Promocoes_Doces/Muffins.png" alt="Muffins Top Bolos" title="Muffins pedaços Chocolate"/>
+                </div>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>                   
+                <a href="form_pedido.php"><button>Comprar</button></a>                     
             </div>
 
-            </div>
             <!--Pudim Leite Condensado-->
-            <div class="quadro3">
+            <div class="corpo">
                 <div class="nome">
-                    <p>Pudim Leite Condensado</p>
-                </div>   
-                <img src="Imagens/Promocoes_Doces/Pudim.png" alt="Pudim Top Bolos" title="Pudim"/>
+                    Pudim Leite Condensado
+                </div>
+                <div class="container-image">
+                    <img src="Imagens/Promocoes_Doces/Pudim.png" alt="Pudim Top Bolos" title="Pudim"/>    
+                </div>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>  
+                <a href="form_pedido.php"><button>Comprar</button></a>    
             </div>
-            </div>
+            
             <!--Hambúrguer de Siri Colorido-->
-            <div class="quadro4">
+            <div class="corpo">
                 <div class="nome">
-                    <p>Hambúrguer de Siri Colorido</p>
-                </div>  
-                <img src="Imagens/Promocoes_Doces/Burguer-Siri.png " alt="Hambúrguer de Siri Top Bolos" title="Hambúrguer de Siri"/>
+                    Hambúrguer de Siri Colorido
+                </div>
+                <div class="container-image">
+                    <img src="Imagens/Promocoes_Doces/Burguer-Siri.png " alt="Hambúrguer de Siri Top Bolos" title="Hambúrguer de Siri"/>
+                </div>
                 <p class="preco">R$: 20,00</p>
-                <button><a href="form_pedido.php">Comprar</a></button>                                
-            </div>
+                <a href="form_pedido.php"><button>Comprar</button></a>                                  
             </div>
         </section>
 
-        <br/>
         <br/>
         <br/>
 
